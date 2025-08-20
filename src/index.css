@@ -1,10 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont,'Font 1','Font 2','Teko', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/* Navigation Typography */
+.nav-item {
+  font-family: 'Teko', sans-serif;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 41.33px;
+  letter-spacing: 2.48px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+  background-color: #CF8700;
+  color: white;
+}
+
+.nav-item-active {
+  background-color: #CF8700;
+  color: white;
+}
+
+.nav-dropdown-item {
+  font-family: 'Teko', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #CF8700;
+  color: white;
 }
 
 code {
