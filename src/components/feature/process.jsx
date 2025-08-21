@@ -317,7 +317,7 @@ const ProcessCards = () => {
       <div 
         style={{
           width: '483px',
-          height: '475px',
+          height: '550px',
           top: '195px',
           backgroundColor: '#CF8700',
           opacity: 1,
