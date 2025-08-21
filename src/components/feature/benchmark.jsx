@@ -54,19 +54,63 @@ const QualityBenchmarks = () => {
         top: '2908px',
         width: '1920px', 
         height: '531px',
-        margin: '0 auto'
+        margin: '0 auto',
+        background: '#ffffffff',
       }}
     >
       {/* Header Section */}
-      <div className="absolute top-8 left-8">
-        <div className="bg-orange-400 text-white px-6 py-3 font-bold text-lg tracking-wide">
-          OUR QUALITY BENCHMARKS
-        </div>
-        <div className="text-gray-800 font-semibold text-base mt-2 tracking-wide">
-          PRECISION AND PURITY IN EVERY GRAIN
-        </div>
-      </div>
-
+      <div style={{
+  position: 'absolute',
+  left: '200px',
+  top: '0px', // You can adjust this if needed
+  width: '1211px',
+  height: '136px',
+  transform: 'rotate(0deg)',
+  opacity: 1
+}}>
+  <div style={{
+    position: 'absolute',
+    top: '8px',
+    left: '8px'
+  }}>
+    <div style={{
+    fontFamily: 'Font 1', // Replace with your actual font family name
+    fontWeight: 400,
+    fontStyle: 'normal',
+    fontSize: '90px',
+    lineHeight: '63px',
+    letterSpacing: '0%',
+    verticalAlign: 'middle',
+    textTransform: 'uppercase',
+    color: '#CF8700', // Orange color (you can adjust this)
+    width: '100%'
+  }}>
+    OUR QUALITY BENCHMARKS
+  </div>
+    <div style={{
+  position: 'absolute',
+  width: '1211px',
+  height: '36px',
+  top: '100px',
+  left: '00px',
+  transform: 'rotate(0deg)',
+  opacity: 1,
+  display: 'flex',
+  alignItems: 'center', // For vertical alignment middle
+  fontFamily: 'Font 1', // Replace with your actual font family name
+  fontWeight: 400,
+  fontStyle: 'normal',
+  fontSize: '50px',
+  lineHeight: '36px',
+  letterSpacing: '1.2%', // letter spacing 1_2 interpreted as 1.2%
+  verticalAlign: 'middle',
+  textTransform: 'uppercase',
+  color: '#374151' // Equivalent to text-gray-800
+}}>
+  PRECISION AND PURITY IN EVERY GRAIN
+</div>
+  </div>
+</div>
       {/* Navigation Arrows */}
       <button 
         onClick={prevSlide}
@@ -126,8 +170,7 @@ const QualityBenchmarks = () => {
 
       {/* Frame Labels */}
       <div className="absolute top-4 right-4 flex gap-4 text-sm text-gray-500">
-        <span>Frame 12</span>
-        <span>Frame 11</span>
+        
       </div>
     </div>
   );

@@ -155,7 +155,7 @@ const IndustriesCards = () => {
         style={{
           width: '483px',
           height: '664px',
-          left: '320px',
+          left: '310px',
           backgroundColor: '#CF8700',
           opacity: 1,
           transform: 'rotate(0deg)',
@@ -175,7 +175,7 @@ const IndustriesCards = () => {
         width: industry.active ? '458px' : '431px',
         height: '89px',
         backgroundColor: 'white',
-        border: industry.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
+        border: industry.active ? '3px solid #ffffffff' : '3px solid #CF8700',
         marginLeft: '25px',
         borderRadius: industry.active ? '0px' : '30px',
         borderTopLeftRadius: industry.active ? '30px' : undefined,
