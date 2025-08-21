@@ -3,7 +3,6 @@ import Header from './components/header';
 import Hero from './components/Hero';
 import About from './components/About';
 import WhyChooseUs from './components/WhyChooseUs';
-import Industries from './components/Industries';
 import Products from './components/Products';
 import Benchmark from './components/feature/benchmark';
 import ParticleSizeComparison from './components/feature/particle'; 

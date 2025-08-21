@@ -167,42 +167,45 @@ const IndustriesCards = () => {
       >
         {/* Industry Selection */}
         <div className="space-y-3 w-full pt-16">
-          {currentData.industries.map((industry, index) => (
-            <div
-              key={index}
-              className="cursor-pointer transition-all duration-200 relative"
-              style={{
-                width: '431px',
-                height: '89px',
-                backgroundColor: 'white',
-                border: industry.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
-                marginRight: industry.active ? '-50px' : '25px',
-                borderRadius: '30px',
-                padding: '12px 20px',
-                boxShadow: industry.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-start'
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setCurrentCard(index);
-              }}
-            >
-              <span 
-                className={`font-medium text-sm ${industry.active ? 'font-bold' : ''}`}
-                style={{ 
-                  color: industry.active ? '#CF8700' : '#000000',
-                  fontSize: '16px',
-                  textTransform: 'uppercase'
-                }}
-              >
-                {industry.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+  {currentData.industries.map((industry, index) => (
+    <div
+      key={index}
+      className="cursor-pointer transition-all duration-200 relative"
+      style={{
+        width: industry.active ? '458px' : '431px',
+        height: '89px',
+        backgroundColor: 'white',
+        border: industry.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
+        marginLeft: '25px',
+        borderRadius: industry.active ? '0px' : '30px',
+        borderTopLeftRadius: industry.active ? '30px' : undefined,
+        borderBottomLeftRadius: industry.active ? '30px' : undefined,
+        padding: '12px 20px',
+        boxShadow: industry.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        opacity: 1
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        setCurrentCard(index);
+      }}
+    >
+      <span
+        className={`font-medium text-sm ${industry.active ? 'font-bold' : ''}`}
+        style={{
+          color: industry.active ? '#CF8700' : '#000000',
+          fontSize: '16px',
+          textTransform: 'uppercase'
+        }}
+      >
+        {industry.name}
+      </span>
+    </div>
+  ))}
+</div>
+  </div>
 
       {/* Second Section - Main Content */}
       <div 
