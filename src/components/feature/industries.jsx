@@ -48,13 +48,13 @@ const IndustriesCards = () => {
     },
     {
       title: "PAPER & PULP",
-      description: "Premium grade GCC significantly improves paper quality by enhancing brightness, opacity, and printability. Our carefully controlled particle size distribution ensures optimal retention and formation in paper manufacturing processes.",
+      description: "In paper manufacturing, GCC is essential for boosting brightness, smoothness, and print quality. Its controlled particle size ensures consistent results, making it ideal for both coated and uncoated papers.",
       features: [
-        "MAXIMIZES PAPER BRIGHTNESS AND OPACITY",
-        "IMPROVES PRINTABILITY AND INK ABSORPTION",
-        "ENHANCES PAPER SMOOTHNESS AND FORMATION",
-        "REDUCES FIBER CONTENT REQUIREMENTS",
-        "OPTIMIZES PRODUCTION EFFICIENCY AND COST"
+        "Improves whiteness and opacity",
+        "Enhances print sharpness and color reproduction",
+        "Reduces paper weight without losing strength",
+        "Improves sheet smoothness and texture",
+        "Lowers production costs through efficient filler use"
       ],
       imageSrc: "/assets/industries/image 5-2.png",
       imageAlt: "Paper and pulp production",
@@ -69,13 +69,13 @@ const IndustriesCards = () => {
     },
     {
       title: "CONSTRUCTION MATERIALS",
-      description: "Our GCC enhances construction materials by improving strength, durability, and workability. From concrete to sealants, our mineral solutions contribute to superior performance and longevity in building applications.",
+      description: "GCC is a key ingredient in construction materials like cement, plaster, and concrete, enhancing workability and long-term durability. It also improves thermal insulation and surface smoothness.",
       features: [
-        "INCREASES CONCRETE STRENGTH AND DURABILITY",
-        "IMPROVES WORKABILITY AND FINISHING",
-        "ENHANCES WEATHER RESISTANCE PROPERTIES",
-        "REDUCES MATERIAL COSTS AND WASTE",
-        "OPTIMIZES CURING TIME AND PERFORMANCE"
+        "Improves bonding strength and durability",
+        "Enhances workability of cement and plaster mixes",
+        "Provides smoother, crack-resistant finishes",
+        "Improves thermal and sound insulation properties",
+        "Increases resistance to wear and weathering"
       ],
       imageSrc:"/assets/industries/image 5-3.png",
       imageAlt: "Construction materials and applications",
@@ -90,13 +90,13 @@ const IndustriesCards = () => {
     },
     {
       title: "PHARMACEUTICALS",
-      description: "High-purity pharmaceutical grade GCC serves as an essential excipient in tablet manufacturing, providing excellent binding properties while maintaining strict quality and safety standards required for medical applications.",
+      description: "Our food- and pharma-grade GCC meets strict purity standards, making it safe for medicinal and supplement applications. It is commonly used as a calcium source and excipient in tablets and powders.",
       features: [
-        "MEETS PHARMACEUTICAL GRADE PURITY STANDARDS",
-        "PROVIDES EXCELLENT TABLET BINDING PROPERTIES",
-        "ENSURES CONSISTENT DOSAGE FORMULATIONS",
-        "COMPLIES WITH INTERNATIONAL QUALITY REGULATIONS",
-        "SUPPORTS CONTROLLED RELEASE MECHANISMS"
+        "100% safe and high purity mineral base",
+        "Serves as an effective calcium supplement",
+        "Functions as an excipient for tablets and capsules",
+        "Provides excellent compressibility and flow properties",
+        "Meets global pharmaceutical quality regulations"
       ],
       imageSrc: "/assets/industries/image 5-4.png",
       imageAlt: "Pharmaceutical applications",
@@ -111,13 +111,13 @@ const IndustriesCards = () => {
     },
     {
       title: "FOOD INDUSTRY",
-      description: "Food-grade GCC serves multiple functions in food processing, from anti-caking agent to nutritional supplement. Our products meet stringent food safety standards while enhancing texture and shelf life of various food products.",
+      description: "GCC is approved for use in specific food applications as a safe mineral additive. It is used to fortify calcium levels and improve texture in various products.",
       features: [
-        "CERTIFIED FOOD-GRADE QUALITY STANDARDS",
-        "ACTS AS EFFECTIVE ANTI-CAKING AGENT",
-        "PROVIDES CALCIUM FORTIFICATION",
-        "ENHANCES PRODUCT TEXTURE AND STABILITY",
-        "EXTENDS SHELF LIFE AND FRESHNESS"
+        "Safe, food-grade certified mineral",
+        "Fortifies calcium content in foods and beverages",
+        "Improves product texture and stability",
+        "Acts as an effective anti-caking agent",
+        "Complies with international food safety standards"
       ],
       imageSrc: "/assets/industries/image 5-5.png",
       imageAlt: "Food industry applications",
