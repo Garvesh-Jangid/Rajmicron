@@ -328,43 +328,46 @@ const ProcessCards = () => {
         className="flex items-center justify-center"
       >
         {/* Process Steps Selection */}
-        <div className="space-y-3 w-full">
-          {currentData.processSteps.map((step, index) => (
-            <div
-              key={index}
-              className="cursor-pointer transition-all duration-200 relative"
-              style={{
-                width: '431px',
-                height: '89px',
-                backgroundColor: 'white',
-                border: step.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
-                marginLeft: step.active ? '-50px' : '25px',
-                borderRadius: '30px',
-                padding: '12px 20px',
-                boxShadow: step.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-start'
-              }}
-              onClick={(e) => {
-                e.stopPropagation();
-                setCurrentCard(index);
-              }}
-            >
-              <span 
-                className={`font-medium text-sm ${step.active ? 'font-bold' : ''}`}
-                style={{ 
-                  color: step.active ? '#CF8700' : '#000000',
-                  fontSize: '16px',
-                  textTransform: 'uppercase'
-                }}
-              >
-                {step.name}
-              </span>
-            </div>
-          ))}
+       <div className="space-y-3 w-full">
+  {currentData.processSteps.map((step, index) => (
+    <div
+      key={index}
+      className="cursor-pointer transition-all duration-200 relative"
+      style={{
+        width: step.active ? '469px' : '431px',
+        height: '89px',
+        backgroundColor: 'white',
+        border: step.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
+        marginLeft: step.active ? '-11px' : '25px',
+        borderRadius: step.active ? '0px' : '30px',
+        borderTopRightRadius: step.active ? '30px' : undefined,
+        borderBottomRightRadius: step.active ? '30px' : undefined,
+        padding: '12px 20px',
+        boxShadow: step.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'flex-start',
+        opacity: 1
+      }}
+      onClick={(e) => {
+        e.stopPropagation();
+        setCurrentCard(index);
+      }}
+    >
+      <span
+        className={`font-medium text-sm ${step.active ? 'font-bold' : ''}`}
+        style={{
+          color: step.active ? '#CF8700' : '#000000',
+          fontSize: '16px',
+          textTransform: 'uppercase'
+        }}
+      >
+        {step.name}
+      </span>
+    </div>
+  ))}
+</div>  
         </div>
-      </div>
 
       {/* Remaining space (fills the 1920px width) */}
       <div style={{ flex: 1, backgroundColor: 'white' }}></div>

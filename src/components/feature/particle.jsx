@@ -360,22 +360,25 @@ const ParticleSizeCards = () => {
       >
         {/* Grade Selection */}
        <div className="space-y-3 w-full">
-  {currentData.grades.map((grade, index) => (
+  {currentData.grades.map((step, index) => (
     <div
       key={index}
       className="cursor-pointer transition-all duration-200 relative"
       style={{
-        width: '431px',
+        width: step.active ? '469px' : '431px',
         height: '89px',
         backgroundColor: 'white',
-        border: grade.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
-        marginLeft: grade.active ? '-50px' : '25px',
-        borderRadius: '30px',
+        border: step.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
+        marginLeft: step.active ? '-11px' : '25px',
+        borderRadius: step.active ? '0px' : '30px',
+        borderTopRightRadius: step.active ? '30px' : undefined,
+        borderBottomRightRadius: step.active ? '30px' : undefined,
         padding: '12px 20px',
-        boxShadow: grade.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
+        boxShadow: step.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        opacity: 1
       }}
       onClick={(e) => {
         e.stopPropagation();
@@ -383,14 +386,14 @@ const ParticleSizeCards = () => {
       }}
     >
       <span 
-        className={`font-medium text-sm ${grade.active ? 'font-bold' : ''}`}
+        className={`font-medium text-sm ${step.active ? 'font-bold' : ''}`}
         style={{ 
-          color: grade.active ? '#CF8700' : '#000000',
+          color: step.active ? '#CF8700' : '#000000',
           fontSize: '16px',
           textTransform: 'uppercase'
         }}
       >
-        {grade.name}
+        {step.name}
       </span>
     </div>
   ))}
