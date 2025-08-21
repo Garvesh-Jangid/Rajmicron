@@ -10,6 +10,8 @@ import ParticleSizeComparison from './components/feature/particle';
 import Services from './components/Services';
 import Contact from './components/contact';
 import Footer from './components/Footer';
+import ProcessCards from './components/feature/process';
+import IndustriesCards from './components/feature/industries';
 
 const App = () => {
   return (
@@ -21,10 +23,11 @@ const App = () => {
       <Benchmark />
       <ParticleSizeComparison />
       {/* <WhyChooseUs /> */}
-      {/* <Industries />
-      <Services />
+      <ProcessCards />
+      <IndustriesCards />
+      {/* <Services />
       <Contact />
-      <Footer /> */}
+      <Footer />  */}
     </div>
   );
 };

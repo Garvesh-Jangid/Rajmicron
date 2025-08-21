@@ -13,7 +13,7 @@ const ParticleSizeCards = () => {
       batchUniformity: "95%",
       consistency: "±0.1 μM",
       activeGrade: "Micron, D50 (Super Fine)",
-      imageSrc: "/assets/particles/image 6 (1).png", // Add your image path here
+      imageSrc: "/assets/particles/image 6 (1).png", 
       imageAlt: "Super fine particle size visualization",
       grades: [
         { name: "Micron, D50 (Super Fine)", active: true },
