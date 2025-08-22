@@ -1,60 +1,92 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import './Footer.css';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-teal-500 text-white p-2 rounded">
-                <span className="text-lg font-bold">RM</span>
+    <footer className="footer">
+      <div className="footer-background-overlay">
+        <div className="footer-content-container">
+          <div className="footer-content">
+            {/* Company Info Section */}
+            <div className="company-section">
+              <div className="company-logo">
+                <div className="logo-icon">📐</div>
+                <h3>RAJ MICRON PRIVATE LIMITED</h3>
               </div>
-              <h3 className="text-xl font-bold">Raj Micron Private Limited</h3>
-            </div>
-            <p className="text-gray-300 mb-4">
-              Leading manufacturer of premium calcium carbonate products, committed to quality, 
-              sustainability, and innovation.
-            </p>
-            <p className="text-gray-400 text-sm">
-              GST NO: 08AANCRB385B1ZY
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-300 hover:text-white transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#products" className="text-gray-300 hover:text-white transition-colors">Products</a></li>
-              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="text-lg font-bold mb-4">Contact Info</h4>
-            <div className="space-y-3 text-gray-300">
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4" />
-                <span className="text-sm">Bidiyad, Parbatsar, Rajasthan</span>
+              <div className="company-details">
+                <p><span className="location-icon">📍</span> Bidiyad, Parbatsar (Raj.)</p>
+                <p><span className="gst-icon">🏢</span> GST NO : 08AANCR8385B1ZY</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span className="text-sm">+91 97408 08234</span>
+              <div className="company-description">
+                <p>At Raj Micron Private Limited, we specialize in the production of Natural Ground Calcium Carbonate (GCC) and Precipitated Calcium Carbonate (PCC). With a focus on quality, sustainability, and innovation, we deliver premium GCC and PCC products that meet the diverse needs of industries worldwide.</p>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span className="text-sm">rajmicronpvtltd@gmail.com</span>
+              <div className="social-links">
+                <a href="#" className="social-link linkedin">in</a>
+                <a href="#" className="social-link facebook">f</a>
+                <a href="#" className="social-link youtube">▶</a>
               </div>
             </div>
+
+            {/* Quick Links Section */}
+            <div className="quick-links-section">
+              <h4>QUICK LINKS</h4>
+              <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#particle-size">Particle Size</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="#why-choose">Why Choose Us ?</a></li>
+                <li><a href="#industries">Industries</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ's</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Section */}
+            <div className="contact-section">
+              <h4>CONTACT US</h4>
+              <div className="contact-item">
+                <span className="contact-icon">📞</span>
+                <div>
+                  <h5>Phone Number</h5>
+                  <p>+91 9929702991</p>
+                  <p>+91 9928157901</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">✉️</span>
+                <div>
+                  <h5>Email Address</h5>
+                  <p>rajmicronpvtltd@gmail.com</p>
+                </div>
+              </div>
+              <div className="contact-item">
+                <span className="contact-icon">📍</span>
+                <div>
+                  <h5>Registered Address</h5>
+                  <p>E-203A Riico Industrial Area,</p>
+                  <p>Bidiyad, Parbatsar (Raj.)</p>
+                  <p>341542</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            © 2025 Raj Micron Private Limited. All rights reserved.
-          </p>
+
+          {/* Footer Bottom */}
+          <div className="footer-bottom">
+            <div className="footer-links">
+              <a href="#terms">Terms & Conditions</a>
+              <a href="#privacy">Privacy Policy</a>
+              <a href="#cookies">Cookies</a>
+            </div>
+            <div className="copyright">
+              <p>© 2025. Rajmicron Private Limited. All rights reserved.</p>
+            </div>
+            <div className="developer-credit">
+              <p>Design and Developed by <span className="lunar-edge">LunarEdge</span></p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail, MapPin, ChevronDown, Verified, MessageCircle } from 'lucide-react';
-
+import { FaWhatsapp } from "react-icons/fa";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProductsOpen, setIsProductsOpen] = useState(false);
@@ -21,401 +21,222 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm">
-      <div 
-        className="mx-auto px-4"
-        style={{
-          width: '1805px',
-          height: '80.60px',
-          position: 'relative',
-          top: '26px',
-          left: '62px',
-          opacity: 1
-        }}
-      >
+    <>
+      {/* Google Fonts Link */}
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" 
+        rel="stylesheet" 
+      />
+      
+      <header className="bg-white shadow-sm relative">
         {/* Top section with logo, company info and contact */}
-        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
-          {/* Logo and Company Info */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-2 sm:space-y-0">
-            <div 
-              className="rounded flex items-center justify-center flex-shrink-0"
-              style={{
-                width: '69.63px',
-                height: '80px'
-              }}
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
+            {/* Logo and Company Info */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
+              <div className="w-16 h-20 sm:w-18 sm:h-20 rounded flex items-center justify-center flex-shrink-0">
+                <img 
+                  src="/assets/logo/Untitled design (27) 1.png" 
+                  alt="Raj Micron Logo" 
+                  className="w-full h-full object-contain"
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.parentElement.innerHTML = '<span class="text-teal-600 font-bold text-2xl">RM</span>';
+                  }}
+                />
+              </div>
+              
+              {/* Company Info */}
+              <div className="flex-1 min-w-0">
+                <h1 
+                  className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-800 uppercase tracking-wide leading-tight text-center sm:text-left"
+                  style={{ fontFamily: 'Teko, sans-serif' }}
+                >
+                  RAJ MICRON PRIVATE LIMITED
+                </h1>
+                <div className="flex flex-col sm:flex-row sm:space-x-6 text-base sm:text-lg text-gray-700 mt-3 space-y-2 sm:space-y-0 font-medium">
+                  <div className="flex items-center justify-center sm:justify-start space-x-2">
+                    <MapPin className="w-5 h-5 flex-shrink-0 text-gray-600" />
+                    <span className="truncate">Bidiyad, Parbatsar (Raj.)</span>
+                  </div>
+                  <div className="flex items-center justify-center sm:justify-start space-x-2">
+                    <Verified className="w-5 h-5 flex-shrink-0 text-green-600" />
+                    <span className="truncate">GST NO : 08AANCRB385B1ZY</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Info - Desktop */}
+            <div className="hidden lg:flex space-x-4 lg:mr-8">
+              {/* Call Section */}
+              <div className="flex items-center space-x-3 border border-gray-300 rounded-lg p-3 bg-gray-50">
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={handleWhatsApp}
+                    className="w-10 h-10 flex items-center justify-center hover:bg-green-100 transition-colors rounded-full group"
+                    title="WhatsApp us"
+                  >
+                    <FaWhatsapp className="w-9 h-9 text-green-600 group-hover:text-green-600 transition-colors" />
+                  </button>
+                  <div className="w-px h-6 bg-gray-300"></div>
+                  <button
+                    onClick={handleCall}
+                    className="w-10 h-10 flex items-center justify-center hover:bg-blue-100 transition-colors rounded-full group"
+                    title="Call us"
+                  >
+                    <Phone className="w-6 h-6 text-gray-600 group-hover:text-blue-600 transition-colors" />
+                  </button>
+                </div>
+                <div className="flex flex-col">
+                  <p className="text-gray-800 font-semibold text-lg uppercase tracking-wider">
+                    CALL US
+                  </p>
+                  <p className="text-gray-600 text-base tracking-wide">
+                    +91 97408 08234
+                  </p>
+                </div>
+              </div>
+
+              {/* Email Section */}
+              <div className="flex items-center space-x-3 border border-gray-300 rounded-lg p-3 bg-gray-50">
+                <button
+                  onClick={handleEmail}
+                  className="w-10 h-10 flex items-center justify-center hover:bg-orange-100 transition-colors rounded-full group"
+                  title="Email us"
+                >
+                  <span className="text-xl font-bold text-yellow-600 group-hover:text-orange-600 transition-colors">@</span>
+                </button>
+                <div className="flex flex-col">
+                  <p className="text-gray-800 font-semibold text-lg uppercase tracking-wider">
+                    EMAIL US
+                  </p>
+                  <p className="text-gray-600 text-sm tracking-wide truncate max-w-48">
+                    rajmicronpvtltd@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile menu button */}
+            <button
+              onClick={toggleMenu}
+              className="lg:hidden absolute top-4 right-4 p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
             >
-              <img 
-                src="/assets/logo/Untitled design (27) 1.png" 
-                alt="Raj Micron Logo" 
-                className="w-full h-full object-contain rounded"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.parentElement.innerHTML = '<span class="text-teal-500 font-bold text-lg">RM</span>';
-                }}
-              />
-            </div>
-            
-            {/* Company Info */}
-            <div className="flex-1 min-w-0">
-              <h1 
-                className="text-gray-800"
-                style={{
-                  fontFamily: 'Teko, sans-serif',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                  fontSize: '52.43px',
-                  lineHeight: '50.23px',
-                  letterSpacing: '0%',
-                  textAlign: 'center',
-                  textTransform: 'uppercase'
-                }}
-              >
-                RAJ MICRON PRIVATE LIMITED
-              </h1>
-              <div className="flex flex-col sm:flex-row sm:space-x-4 text-l sm:text-sm text-gray-600 mt-1 space-y-1 sm:space-y-0">
-                <div className="flex items-center space-x-1">
-                  <MapPin className="w-3 h-3 flex-shrink-0" />
-                  <span className="truncate">Bidiyad, Parbatsar (Raj.)</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <Verified className="w-3 h-3 flex-shrink-0" />
-                  <span className="truncate">GST NO : 08AANCRB385B1ZY</span>
-                </div>
-              </div>
-            </div>
+              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
 
-          {/* Contact Info */}
-          <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4 lg:space-x-6">
-            {/* Call Section - All in one border */}
-            <div className="flex items-center space-x-3 border border-gray-300 rounded p-3" style={{ backgroundColor: '#F2F2F2' }}>
-              <div className="flex items-center space-x-2">
-                <button
-                  onClick={handleWhatsApp}
-                  className="w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition-colors rounded"
-                  title="WhatsApp us"
-                >
-                  <MessageCircle className="w-5 h-5" style={{ color: '#CF8700' }} />
-                </button>
-                <span className="text-gray-400 text-lg">|</span>
-                <button
-                  onClick={handleCall}
-                  className="w-10 h-10 flex items-center justify-center hover:bg-gray-200 transition-colors rounded"
-                  title="Call us"
-                >
-                  <Phone className="w-5 h-5 text-gray-600" />
-                </button>
-              </div>
-              <div className="flex flex-col justify-center">
-                <p 
-                  className="text-gray-800 uppercase" 
-                  style={{
-                    fontFamily: 'Teko',
-                    fontWeight: 600,
-                    fontSize: '24px',
-                    lineHeight: '26px',
-                    letterSpacing: '0.125em',
-                    textTransform: 'uppercase'
-                  }}
-                >
-                  CALL US
-                </p>
-                <p 
-                  className="text-gray-600" 
-                  style={{
-                    fontFamily: 'Teko',
-                    fontWeight: 400,
-                    fontSize: '20px',
-                    lineHeight: '23px',
-                    letterSpacing: '0.125em',
-                    textTransform: 'uppercase'
-                  }}
-                >
-                  +91 97408 08234
-                </p>
-              </div>
-            </div>
-
-            {/* Email Section - All in one border */}
-            <div className="flex items-center space-x-3 border border-gray-300 rounded p-3" style={{ backgroundColor: '#F2F2F2' }}>
-              <button
-                onClick={handleEmail}
-                className="w-10 h-10 flex items-center justify-center hover:bg-gray-100 transition-colors rounded"
-                title="Email us"
+          {/* Mobile Contact Info */}
+          <div className="lg:hidden pb-4 pt-4">
+            <div className="flex flex-col sm:flex-row sm:justify-between space-y-2 sm:space-y-0 text-sm text-gray-700 font-medium">
+              <button 
+                onClick={handleCall}
+                className="flex items-center justify-center sm:justify-start space-x-2 hover:text-blue-600 transition-colors"
               >
-                <span className="text-lg font-bold" style={{ color: '#CF8700' }}>@</span>
+                <Phone className="w-4 h-4" />
+                <span>+91 97408 08234</span>
               </button>
-              <div className="flex flex-col justify-center">
-                <p 
-                  className="text-gray-800 uppercase" 
-                  style={{
-                    fontFamily: 'Teko',
-                    fontWeight: 600,
-                    fontSize: '24px',
-                    lineHeight: '26px',
-                    letterSpacing: '0.125em',
-                    textTransform: 'uppercase'
-                  }}
-                >
-                  EMAIL US
-                </p>
-                <p 
-                  className="text-gray-600" 
-                  style={{
-                    fontFamily: 'Teko',
-                    fontWeight: 400,
-                    fontSize: '20px',
-                    lineHeight: '23px',
-                    letterSpacing: '0.125em'
-                  }}
-                >
-                  rajmicronpvtltd@gmail.com
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            onClick={toggleMenu}
-            className="lg:hidden absolute top-4 right-4 p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
-          >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Contact Info (visible only on small screens) */}
-        <div className="sm:hidden pb-4 border-t border-gray-100 pt-4">
-          <div className="flex justify-between text-xs text-gray-600">
-            <div className="flex items-center space-x-1">
-              <Phone className="w-3 h-3" />
-              <span>+91 97408 08234</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Mail className="w-3 h-3" />
-              <span>rajmicronpvtltd@gmail.com</span>
+              <button 
+                onClick={handleEmail}
+                className="flex items-center justify-center sm:justify-start space-x-2 hover:text-orange-600 transition-colors"
+              >
+                <Mail className="w-4 h-4" />
+                <span className="truncate">rajmicronpvtltd@gmail.com</span>
+              </button>
             </div>
           </div>
         </div>
 
         {/* Navigation Bar */}
-        <nav 
-          className={`${isMenuOpen ? 'block' : 'hidden'} lg:block border-t border-gray-200`}
-          style={{ 
-            backgroundColor: '#FFF7E9',
-            width: '1805px',
-            height: '75px',
-            position: 'absolute',
-            top: '120px',
-            left: '0px',
-            opacity: 1
-          }}
-        >
-          <ul 
-            className="flex flex-col lg:flex-row"
-            style={{
-              width: '1172.54px',
-              height: '62px',
-              position: 'relative',
-              top: '6px',
-              left: '55px',
-              opacity: 1,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '65px'
-            }}
-          >
-            <li>
-              <a 
-                href="#home" 
-                className="flex items-center justify-center text-white transition-all duration-300"
-                style={{ 
-                  backgroundColor: '#CF8700',
-                  width: '119.87px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                HOME
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#about" 
-                className="flex items-center justify-center text-gray-700 hover:text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  width: '119.87px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#CF8700'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                ABOUT US
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#why-choose" 
-                className="flex items-center justify-center text-gray-700 hover:text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  width: '250px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#CF8700'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                WHY CHOOSE US ?
-              </a>
-            </li>
-            <li>
-              <a 
-                href="#industries" 
-                className="flex items-center justify-center text-gray-700 hover:text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  width: '119.87px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#CF8700'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                INDUSTRIES
-              </a>
-            </li>
-            <li className="relative">
-              <button
-                onClick={toggleProducts}
-                className="flex items-center justify-center text-gray-700 hover:text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  width: '150px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#CF8700'}
-                onMouseLeave={(e) => {
-                  if (!isProductsOpen) e.target.style.backgroundColor = 'transparent';
-                }}
-              >
-                PRODUCTS
-                <ChevronDown className={`w-4 h-4 ml-2 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {isProductsOpen && (
-                <div className="lg:absolute lg:top-full lg:left-0 lg:bg-white lg:shadow-lg lg:border lg:border-gray-200 lg:min-w-80 bg-gray-50 lg:bg-white z-50">
+        <nav className={`${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#FFF7E9]">
+              <ul className="flex flex-col lg:flex-row lg:justify-start lg:items-center py-2 lg:py-0 space-y-2 lg:space-y-0 lg:space-x-8 lg:ml-8">
+                <li>
                   <a 
-                    href="#gcc" 
-                    className="block px-4 lg:px-6 py-3 text-gray-700 hover:bg-gray-100 text-sm border-b border-gray-200"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      setIsProductsOpen(false);
-                    }}
+                    href="#home" 
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-white bg-yellow-600 hover:bg-yellow-700 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Ground Calcium Carbonate (GCC)
+                    HOME
                   </a>
+                </li>
+                <li>
                   <a 
-                    href="#pcc" 
-                    className="block px-4 lg:px-6 py-3 text-gray-700 hover:bg-gray-100 text-sm"
-                    onClick={() => {
-                      setIsMenuOpen(false);
-                      setIsProductsOpen(false);
-                    }}
+                    href="#about" 
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    onClick={() => setIsMenuOpen(false)}
                   >
-                    Precipitated Calcium Carbonate (PCC)
+                    ABOUT US
                   </a>
-                </div>
-              )}
-            </li>
-            <li>
-              <a 
-                href="#services" 
-                className="flex items-center justify-center text-gray-700 hover:text-white transition-all duration-300 hover:scale-105"
-                style={{
-                  width: '119.87px',
-                  height: '62px',
-                  borderRadius: '6.89px',
-                  opacity: 1,
-                  fontFamily: 'Teko',
-                  fontWeight: 500,
-                  fontStyle: 'normal',
-                  fontSize: '31px',
-                  lineHeight: '41.33px',
-                  letterSpacing: '2.48px',
-                  wordSpacing: '4px',
-                  textAlign: 'center',
-                  verticalAlign: 'middle',
-                  textTransform: 'uppercase'
-                }}
-                onMouseEnter={(e) => e.target.style.backgroundColor = '#CF8700'}
-                onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                SERVICES
-              </a>
-            </li>
-          </ul>
+                </li>
+                <li>
+                  <a 
+                    href="#why-choose" 
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    WHY CHOOSE US?
+                  </a>
+                </li>
+                <li>
+                  <a 
+                    href="#industries" 
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    INDUSTRIES
+                  </a>
+                </li>
+                <li className="relative">
+                  <button
+                    onClick={toggleProducts}
+                    className="flex items-center justify-center lg:justify-center w-full px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                  >
+                    PRODUCTS
+                    <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
+                  </button>
+                  {isProductsOpen && (
+                    <div className="lg:absolute lg:top-full lg:left-1/2 lg:-translate-x-1/2 lg:mt-1 lg:bg-white lg:shadow-lg lg:border lg:border-gray-200 lg:min-w-80 lg:rounded-md bg-gray-100 lg:bg-white z-50">
+                      <a 
+                        href="#gcc" 
+                        className="block px-6 py-3 text-gray-700 hover:bg-yellow-100 hover:text-yellow-700 text-base border-b border-gray-200 lg:border-b-0 lg:rounded-t-md transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsProductsOpen(false);
+                        }}
+                      >
+                        Ground Calcium Carbonate (GCC)
+                      </a>
+                      <a 
+                        href="#pcc" 
+                        className="block px-6 py-3 text-gray-700 hover:bg-yellow-100 hover:text-yellow-700 text-base lg:rounded-b-md transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsProductsOpen(false);
+                        }}
+                      >
+                        Precipitated Calcium Carbonate (PCC)
+                      </a>
+                    </div>
+                  )}
+                </li>
+                <li>
+                  <a 
+                    href="#services" 
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    SERVICES
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </nav>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 
