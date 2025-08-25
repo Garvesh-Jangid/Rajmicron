@@ -31,8 +31,8 @@ const About = () => {
             </h3>
 
             <p
-  className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl"
-  style={{ fontFamily: "Font2", fontWeight: "400px" }}
+  className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl font-rubik"
+  
 >
   At Raj Micron, we are committed to producing Natural Ground Calcium Carbonate that meets the highest global quality standards.
   Our operations are built on precision, innovation, and sustainability, ensuring that every product we deliver contributes to our
@@ -114,7 +114,7 @@ const About = () => {
             ].map((item, index) => (
               <div 
                 key={item.title} 
-                className="bg-[#FFF7E9] p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start justify-start h-64 lg:h-72"
+                className="bg-[#FFF7E9] p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col items-start justify-start h-60 lg:h-80 font-rubik"
               >
                 {/* Icon */}
                 <div className="w-16 h-16 mb-4 flex items-center justify-center">
@@ -127,8 +127,8 @@ const About = () => {
                 </div>
                 
                 <h4 
-                  className="text-2xl lg:text-3xl font-normal text-gray-800 uppercase tracking-wide leading-tight mb-3"
-                  style={{ fontFamily: 'Teko, sans-serif' }}
+                  className="text-2xl lg:text-3xl font-normal text-gray-800 uppercase tracking-wide leading-tight mb-3 font-teko"
+                  
                 >
                   {item.title}
                 </h4>

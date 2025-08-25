@@ -10,8 +10,9 @@ module.exports = {
         'raj-teal': '#14b8a6',
       },
       fontFamily: {
-        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
-      }
+        teko: ['Teko', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
+      },
     },
   },
     plugins: [],

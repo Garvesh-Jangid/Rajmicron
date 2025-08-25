@@ -155,9 +155,9 @@ const Header = () => {
 
         {/* Navigation Bar */}
         <nav className={`${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
-          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-2">
             <div className="bg-[#FFF7E9]">
-              <ul className="flex flex-col lg:flex-row lg:justify-start lg:items-center py-2 lg:py-0 space-y-2 lg:space-y-0 lg:space-x-8 lg:ml-8">
+              <ul className="flex flex-col lg:flex-row lg:justify-start lg:items-center py-2 lg:py-0 space-y-2 lg:space-y-0 lg:space-x-8 lg:ml-8 font-teko font-bold">
                 <li>
                   <a 
                     href="#home" 

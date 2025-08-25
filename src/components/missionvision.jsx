@@ -4,16 +4,16 @@ const MissionVision = () => {
   return (
     <section 
       id="mission-vision"
-      className="relative overflow-hidden py-16 lg:py-20"
+      className="relative overflow-hidden py-10 lg:py-2"
     >
-      <div className="bg-[#FFF7E9] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div className="bg-[#ffffff] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14"> 
         
         {/* Desktop Layout */}
         <div className="hidden lg:flex gap-12">
           {/* Mission Section - Left */}
           <div className="w-96 bg-yellow-600 rounded-lg p-8 flex flex-col justify-between h-full">
             <div>
-              <h2 className="text-white text-4xl font-bold uppercase tracking-wide mb-8">
+              <h2 className="text-white text-6xl font-regular uppercase tracking-wide mb- font-teko">
                 OUR MISSION
               </h2>
 
@@ -38,12 +38,12 @@ const MissionVision = () => {
                     className="bg-white rounded-full px-6 py-4 flex items-center gap-4"
                   >
                     <div className="flex-shrink-0 w-8 h-8 flex items-center justify-center">
-                      <span className="text-xl font-bold text-gray-800">
+                      <span className="text-4xl font-regular font-teko text-gray-800">
                         {item.num}
                       </span>
                     </div>
                     <div className="flex-1">
-                      <p className="text-sm font-semibold text-gray-800 leading-tight">
+                      <p className="text-xl font-regular font-teko text-gray-800 leading-tight">
                         {item.title}
                       </p>
                     </div>
@@ -56,45 +56,45 @@ const MissionVision = () => {
           {/* Vision Section - Right */}
           <div className="flex-1 flex h-full">
             {/* Vision Content */}
-            <div className="flex-1 pr-8 flex flex-col justify-between py-2">
+            <div className="bg-[#FFF7E9] flex-1 pr-8 flex flex-col justify-between py-2">
               <div>
-                <h2 className="text-5xl lg:text-6xl xl:text-7xl font-bold text-yellow-600 uppercase tracking-wide leading-tight mb-4">
+                <h2 className="text-5xl lg:text-6xl xl:text-6xl font-regular text-yellow-600 uppercase tracking-wide leading-tight mb- font-teko">
                   OUR VISION
                 </h2>
 
-                <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold text-gray-800 uppercase tracking-wide leading-tight mb-6">
+                <h3 className="text-xl lg:text-2xl xl:text-4xl font-regular font-teko text-gray-800 uppercase tracking-wide leading-tight mb-6">
                   WHERE PURPOSE MEETS PROGRESS
                 </h3>
 
-                <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-12 max-w-2xl">
+                <p className="text-base lg:text-lg text-gray-700 leading-relaxed mb-12 max-w-2xl font-rubik font-regular">
                   To become a global leader in premium Ground Calcium Carbonate solutions, setting benchmarks in quality,
                   sustainability, and innovation.
                 </p>
               </div>
 
               {/* Statistics */}
-              <div className="flex gap-12 lg:gap-16">
+              <div className="flex gap-12 lg:gap-16 font-regular font-teko">
                 <div>
-                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-2">
+                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-regular text-gray-800 mb-2">
                     100%
                   </h4>
-                  <p className="text-sm lg:text-base text-gray-700 uppercase font-bold leading-tight">
+                  <p className="text-sm lg:text-base text-gray-700 uppercase font-regular leading-tight">
                     CUSTOMER-CENTRIC<br />APPROACH
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-2">
+                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-regular text-gray-800 mb-2">
                     20+
                   </h4>
-                  <p className="text-sm lg:text-base text-gray-700 uppercase font-bold leading-tight">
+                  <p className="text-sm lg:text-base text-gray-700 uppercase font-regular leading-tight">
                     COUNTRIES<br />SERVED
                   </p>
                 </div>
                 <div>
-                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-2">
+                  <h4 className="text-4xl lg:text-5xl xl:text-6xl font-regular text-gray-800 mb-2">
                     100%
                   </h4>
-                  <p className="text-sm lg:text-base text-gray-700 uppercase font-bold leading-tight">
+                  <p className="text-sm lg:text-base text-gray-700 uppercase font-regular leading-tight">
                     SUSTAINABLE<br />PRACTICES
                   </p>
                 </div>
@@ -131,8 +131,8 @@ const MissionVision = () => {
         {/* Mobile and Tablet Layout */}
         <div className="lg:hidden">
           {/* Mission Section Mobile */}
-          <div className="bg-yellow-600 rounded-lg p-6 mb-8">
-            <h2 className="text-white text-3xl sm:text-4xl font-bold uppercase tracking-wide mb-6">
+          <div className="bg-yellow-600 rounded-lg p-6 mb-8 font-teko">
+            <h2 className="text-white text-3xl sm:text-4xl font-bold uppercase tracking-wide mb-6 font-teko">
               OUR MISSION
             </h2>
 
@@ -155,9 +155,7 @@ const MissionVision = () => {
                   key={item.num}
                   className="bg-white rounded-full px-4 py-3 flex items-center gap-3"
                 >
-                  <span className="text-lg font-bold text-gray-800 flex-shrink-0">
-                    {item.num}
-                  </span>
+                 
                   <p className="text-sm font-semibold text-gray-800 leading-tight">
                     {item.title}
                   </p>

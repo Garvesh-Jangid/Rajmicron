@@ -1,4 +1,3 @@
-import { Radius } from 'lucide-react';
 import React, { useState } from 'react';
 
 const RequirementForm = () => {
@@ -29,37 +28,25 @@ const RequirementForm = () => {
   };
 
   return (
-    <div 
-      style={{
-        width: '1920px',
-        height: '877px',
-        top: '8362px',
-        transform: 'rotate(0deg)',
-        opacity: 1,
-        position: 'absolute'
-      }}
-      className="bg-white overflow-hidden"
-    >
-      <div className="w-full h-full px-8 py-6 overflow-y-auto">
+     <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-6">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-14">
         
         {/* Header Section */}
-        <div styles ={{left: '195px'}} className="text-center mb-8">
-          <h1 className="text-4xl lg:text-6xl font-normal uppercase leading-tight mb-3" 
-              style={{ color: "#CF8700", fontFamily: "Font 1, sans-serif" }}>
+        <div className=" mb-8">
+          <h1 className="font-teko text-4xl lg:text-5xl xl:text-8xl font-regular text-yellow-600 uppercase tracking-wide leading-tight mb-4">
             SEND US YOUR REQUIREMENT
           </h1>
-          <p className="text-lg lg:text-2xl font-normal uppercase leading-tight" 
-             style={{ color: "#060606", fontFamily: "Font 1, sans-serif" }}>
+          <p className="font-teko text-2xl lg:text-xl xl:text-5xl font-regular text-gray-800 uppercase leading-tight mb-4">
             FILL IN THE DETAILS BELOW, AND OUR TEAM WILL RESPOND WITHIN 24 HOURS.
           </p>
         </div>
 
         {/* Form Section */}
-        <div className="bg-white rounded-lg p-6 mb-6">
+        <div className="bg-white rounded-lg p-2 sm:p-2 mb-6">
           <div className="space-y-6">
             
             {/* First Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div>
                 <input
                   type="text"
@@ -67,7 +54,7 @@ const RequirementForm = () => {
                   placeholder="Full Name"
                   value={formData.fullName}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 bg-gray-100 border-0 rounded-lg text-base placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300"
                 />
               </div>
               <div>
@@ -77,7 +64,7 @@ const RequirementForm = () => {
                   placeholder="Business Name"
                   value={formData.businessName}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300"
                 />
               </div>
               <div>
@@ -87,13 +74,13 @@ const RequirementForm = () => {
                   placeholder="Phone Number"
                   value={formData.phoneNumber}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300"
                 />
               </div>
             </div>
 
             {/* Second Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <input
                   type="email"
@@ -101,7 +88,7 @@ const RequirementForm = () => {
                   placeholder="Email Address"
                   value={formData.emailAddress}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300"
                 />
               </div>
               <div>
@@ -111,19 +98,19 @@ const RequirementForm = () => {
                   placeholder="Address"
                   value={formData.address}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300"
                 />
               </div>
             </div>
 
             {/* Third Row */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               <div className="relative">
                 <select
                   name="product"
                   value={formData.product}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
                 >
                   <option value="">Product</option>
                   <option value="industrial-equipment">Industrial Equipment</option>
@@ -133,7 +120,7 @@ const RequirementForm = () => {
                   <option value="machinery">Machinery</option>
                   <option value="other">Other</option>
                 </select>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none">
+                <div className="absolute inset-y-0 right-0 flex items-center pr-4 sm:pr-6 pointer-events-none">
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
@@ -144,7 +131,7 @@ const RequirementForm = () => {
                   name="quantity"
                   value={formData.quantity}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
                 >
                   <option value="">Quantity</option>
                   <option value="1-10">1-10 units</option>
@@ -154,7 +141,7 @@ const RequirementForm = () => {
                   <option value="500+">500+ units</option>
                   <option value="bulk">Bulk Order</option>
                 </select>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none">
+                <div className="absolute inset-y-0 right-0 flex items-center pr-4 sm:pr-6 pointer-events-none">
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
@@ -165,7 +152,7 @@ const RequirementForm = () => {
                   name="productPackaging"
                   value={formData.productPackaging}
                   onChange={handleInputChange}
-                  className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
+                  className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg text-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300 appearance-none cursor-pointer"
                 >
                   <option value="">Product packaging (25 kg)</option>
                   <option value="25kg">25 kg bags</option>
@@ -175,7 +162,7 @@ const RequirementForm = () => {
                   <option value="drums">Drums</option>
                   <option value="containers">Containers</option>
                 </select>
-                <div className="absolute inset-y-0 right-0 flex items-center pr-6 pointer-events-none">
+                <div className="absolute inset-y-0 right-0 flex items-center pr-4 sm:pr-6 pointer-events-none">
                   <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
                   </svg>
@@ -191,21 +178,21 @@ const RequirementForm = () => {
                 value={formData.description}
                 onChange={handleInputChange}
                 rows="6"
-                className="w-full px-6 py-4 bg-gray-100 border-0 rounded-lg text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:bg-white transition-all duration-300 resize-vertical"
+                className="w-full px-4 sm:px-6 py-3 sm:py-4 bg-gray-100 border-0 rounded-lg text-base sm:text-lg placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:bg-white transition-all duration-300 resize-vertical"
               ></textarea>
             </div>
           </div>
         </div>
 
         {/* Submit Button Section */}
-        <div className="text-left">
-          <button
-            onClick={handleSubmit}
-            className="bg-[#CF8700] hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg text-lg tracking-wider transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-orange-300 shadow-lg"
-          >
-            SUBMIT ENQUIRY →
-          </button>
-        </div>
+         <div className="font-teko">
+            <button
+              type="submit"
+              className="bg-[#CF8700] text-white font-[400] font-teko py-2 px-8 rounded-sm hover:bg-[#c8933b] transition-colors uppercase  text-lg tracking-wider"
+            >
+              Submit Enquiry &gt;
+            </button>
+          </div>
         
       </div>
     </div>
