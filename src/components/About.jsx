@@ -11,11 +11,11 @@ const About = () => {
       
       <section
         id="about"
-        className="relative overflow-hidden bg-white py-16 lg:py-20"
+        className="relative overflow-hidden bg-white py-4 lg:py-4"
       >
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-14">
           {/* About Us Header */}
-          <div className="mb-16">
+          <div className="mb-6">
             <h2
               className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal text-yellow-600 uppercase tracking-wide leading-tight mb-6"
               style={{ fontFamily: 'Teko, sans-serif' }}
@@ -30,15 +30,18 @@ const About = () => {
               RAJ MICRON : FROM EARTH TO EXCELLENCE
             </h3>
 
-            <p className="text-lg sm:text-xl lg:text-2xl font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-6xl">
-              At Raj Micron, we are committed to producing Natural Ground Calcium Carbonate that meets the highest global quality standards.
-              Our operations are built on precision, innovation, and sustainability, ensuring that every product we deliver contributes to our
-              clients' success. From paints and plastics to paper and pharmaceuticals, our GCC plays a vital role in diverse industries.
-            </p>
+            <p
+  className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl"
+  style={{ fontFamily: "Font2", fontWeight: "400px" }}
+>
+  At Raj Micron, we are committed to producing Natural Ground Calcium Carbonate that meets the highest global quality standards.
+  Our operations are built on precision, innovation, and sustainability, ensuring that every product we deliver contributes to our
+  clients' success. From paints and plastics to paper and pharmaceuticals, our GCC plays a vital role in diverse industries.
+</p>
           </div>
 
           {/* Factory Images */}
-          <div className="mb-16">
+          <div className="mb-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
               {/* First Image - Full Height */}
               <div className="rounded-lg overflow-hidden shadow-lg border border-gray-200 h-64 lg:h-80">
@@ -46,9 +49,7 @@ const About = () => {
                   src="/assets/aboutus/interior/Rectangle 4.png"
                   alt="Factory Interior 1"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAuNSAxMDAuNUwyOTkuNSAyOTkuNSIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjMiLz4KPHA6dGggZD0iTTEwMC41IDI5OS41TDI5OS41IDEwMC41IiBzdHJva2U9IiM5QjlCQTMiIHN0cm9rZS13aWR0aD0iMyIvPgo8dGV4dCB4PSIyMDAiIHk9IjE1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlCOUJBMyIgZm9udC1zaXplPSIxNiI+RmFjdG9yeSBJbnRlcmlvcjwvdGV4dD4KPC9zdmc+';
-                  }}
+                  
                 />
               </div>
               
@@ -58,9 +59,7 @@ const About = () => {
                   src="/assets/aboutus/interior/Rectangle 5.png"
                   alt="Factory Interior 2"
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAuNSAxMDAuNUwyOTkuNSAyOTkuNSIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjMiLz4KPHA6dGggZD0iTTEwMC41IDI5OS41TDI5OS41IDEwMC41IiBzdHJva2U9IiM5QjlCQTMiIHN0cm9rZS13aWR0aD0iMyIvPgo8dGV4dCB4PSIyMDAiIHk9IjE1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlCOUJBMyIgZm9udC1zaXplPSIxNiI+UHJvZHVjdGlvbjwvdGV4dD4KPC9zdmc+';
-                  }}
+                 
                 />
               </div>
               
@@ -72,9 +71,7 @@ const About = () => {
                     src="/assets/aboutus/interior/Rectangle 6.png"
                     alt="Product Processing"
                     className="w-full h-full object-cover"
-                    onError={(e) => {
-                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAuNSAxMDAuNUwyOTkuNSAyOTkuNSIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjMiLz4KPHA6dGggZD0iTTEwMC41IDI5OS41TDI5OS41IDEwMC41IiBzdHJva2U9IiM5QjlCQTMiIHN0cm9rZS13aWR0aD0iMyIvPgo8dGV4dCB4PSIyMDAiIHk9IjE1MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzlCOUJBMyIgZm9udC1zaXplPSIxNiI+UHJvY2Vzc2luZzwvdGV4dD4KPC9zdmc+';
-                    }}
+                    
                   />
                 </div>
                 
@@ -125,9 +122,7 @@ const About = () => {
                     src={item.iconSrc}
                     alt={`${item.title} icon`}
                     className="w-full h-full object-contain"
-                    onError={(e) => {
-                      e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZpZXdCb3g9IjAgMCA2NCA2NCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzIiIGN5PSIzMiIgcj0iMzIiIGZpbGw9IiNGRkI4MDAiLz4KPHBhdGggZD0iTTI0IDI0SDE0MEw0MCA0MEgyNFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPg==';
-                    }}
+                    
                   />
                 </div>
                 

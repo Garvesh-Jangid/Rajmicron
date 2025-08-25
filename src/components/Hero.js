@@ -6,14 +6,20 @@ const Hero = () => {
       id="home"
       className="relative bg-white overflow-hidden"
     >
-      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      {/* Reduced top padding */}
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-6">
+        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-14">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
+
           
           {/* Left Content */}
           <div className="flex flex-col justify-center space-y-6">
             
             {/* Quality Calcium Carbonate Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-meduim text-gray-800 leading-none uppercase tracking-wide" style={{ fontFamily: 'Teko, sans-serif', weight : '600' }}>
+            <h1
+              className="text-2xl sm:text-3xl lg:text-4xl xl:text-6xl font-medium text-gray-800 leading-none uppercase tracking-wide"
+              style={{ fontFamily: 'Teko, sans-serif', fontWeight: '600', width: '800px' }}
+            >
               QUALITY CALCIUM CARBONATE
             </h1>
             
@@ -25,14 +31,16 @@ const Hero = () => {
             </div>
             
             {/* PAINTS - Large Orange Text */}
-            <div className="my-4">
+            <div className="my-3">
               <h2 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-yellow-600 leading-none uppercase tracking-wide drop-shadow-lg">
                 PAINTS
               </h2>
             </div>
             
             {/* Description */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed max-w-2xl">
+            <p
+              className="text-2xl font-['Font2'] text-gray-700 leading-snug tracking-tight max-w-2xl break-words"
+            >
               Delivering premium GCC and PCC products with unmatched quality, 
               sustainability, and innovation — sourced from nature, refined for performance.
             </p>
@@ -53,7 +61,7 @@ const Hero = () => {
           
           {/* Right Content - Image */}
           <div className="relative flex items-center justify-center lg:justify-end">             
-            <div className="relative w-full max-w-2xl">               
+            <div className="relative w-full max-w-xl"> {/* reduced from max-w-2xl to max-w-xl */}
               <img                  
                 src="/assets/images/Image (1).png"                 
                 alt="Raj Micron Industrial Manufacturing Facility"                 
@@ -61,10 +69,10 @@ const Hero = () => {
                 style={{
                   filter: 'brightness(1.05) contrast(1.1)'
                 }}
-                            
               />
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>

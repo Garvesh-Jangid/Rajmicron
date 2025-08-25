@@ -28,42 +28,47 @@ const Header = () => {
         rel="stylesheet" 
       />
       
-      <header className="bg-white shadow-sm relative">
-        {/* Top section with logo, company info and contact */}
-        <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
-            {/* Logo and Company Info */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
-              <div className="w-16 h-20 sm:w-18 sm:h-20 rounded flex items-center justify-center flex-shrink-0">
-                <img 
-                  src="/assets/logo/Untitled design (27) 1.png" 
-                  alt="Raj Micron Logo" 
-                  className="w-full h-full object-contain"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.parentElement.innerHTML = '<span class="text-teal-600 font-bold text-2xl">RM</span>';
-                  }}
-                />
-              </div>
-              
-              {/* Company Info */}
-              <div className="flex-1 min-w-0">
-                <h1 
-                  className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-800 uppercase tracking-wide leading-tight text-center sm:text-left"
-                  style={{ fontFamily: 'Teko, sans-serif' }}
-                >
-                  RAJ MICRON PRIVATE LIMITED
-                </h1>
-                <div className="flex flex-col sm:flex-row sm:space-x-6 text-base sm:text-lg text-gray-700 mt-3 space-y-2 sm:space-y-0 font-medium">
-                  <div className="flex items-center justify-center sm:justify-start space-x-2">
-                    <MapPin className="w-5 h-5 flex-shrink-0 text-gray-600" />
-                    <span className="truncate">Bidiyad, Parbatsar (Raj.)</span>
-                  </div>
-                  <div className="flex items-center justify-center sm:justify-start space-x-2">
-                    <Verified className="w-5 h-5 flex-shrink-0 text-green-600" />
-                    <span className="truncate">GST NO : 08AANCRB385B1ZY</span>
-                  </div>
-                </div>
+     <header className="bg-white shadow-sm relative">
+  {/* Top section with logo, company info and contact */}
+  <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
+      {/* Logo and Company Info */}
+      <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
+        <div className="w-16 h-20 sm:w-18 sm:h-20 rounded flex items-center justify-center flex-shrink-0">
+          <img
+            src="/assets/logo/Untitled design (27) 1.png"
+            alt="Raj Micron Logo"
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              e.target.style.display = "none";
+              e.target.parentElement.innerHTML =
+                '<span class="text-teal-600 font-bold text-2xl">RM</span>';
+            }}
+          />
+        </div>
+
+        {/* Company Info */}
+        <div className="flex-1 min-w-0">
+          <h1
+            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-medium text-gray-800 uppercase tracking-wide leading-tight text-center sm:text-left"
+            style={{ fontFamily: "Teko, sans-serif" }}
+          >
+            RAJ MICRON PRIVATE LIMITED
+          </h1>
+
+          <div
+            className="flex flex-col sm:flex-row sm:space-x-10 text-base sm:text-lg lg:text-xl text-gray-700 mt-1 space-y-2 sm:space-y-0 font-normal w-full max-w-4xl"
+            style={{ fontFamily: "Font2" }}
+          >
+            <div className="flex items-center justify-center sm:justify-start space-x-3 w-full">
+              <MapPin className="w-6 h-6 flex-shrink-0 text-gray-600" />
+              <span className="truncate">Bidiyad, Parbatsar (Raj.)</span>
+            </div>
+            <div className="flex items-center justify-center sm:justify-start space-x-3 w-full">
+              <Verified className="w-6 h-6 flex-shrink-0 text-green-600" />
+              <span className="truncate">GST NO : 08AANCRB385B1ZY</span>
+            </div>
+          </div>
               </div>
             </div>
 
