@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
             <h3 className="font-teko text-2xl lg:text-3xl xl:text-6xl font-meduim text-gray-800 uppercase tracking-wide leading-tight mb-4">
               DELIVERING EXCELLENCE FROM THE GROUND UP
             </h3>
-            <p className="font-rubik text-base lg:text-lg text-gray-700 leading-relaxed max-w-8xl font-regular">
+            <p className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl font-rubik">
               We combine world-class resources, advanced processing, and decades
               of expertise to produce high-purity Ground Calcium Carbonate that
               meets the most demanding industry standards. From customization to

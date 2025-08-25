@@ -9,9 +9,9 @@ const MissionVision = () => {
       <div className="bg-[#ffffff] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14"> 
         
         {/* Desktop Layout */}
-        <div className="hidden lg:flex gap-12">
+        <div className="hidden lg:flex items-stretch gap-1 lg:gap-2 xl:gap-3">
           {/* Mission Section - Left */}
-          <div className="w-96 bg-yellow-600 rounded-lg p-8 flex flex-col justify-between h-full">
+          <div className="shrink-0 basis-80 md:basis-100 xl:basis-[28rem] bg-yellow-600 rounded-lg p-8 flex flex-col justify-between h-full">
             <div>
               <h2 className="text-white text-6xl font-regular uppercase tracking-wide mb- font-teko">
                 OUR MISSION
@@ -54,10 +54,10 @@ const MissionVision = () => {
           </div>
 
           {/* Vision Section - Right */}
-          <div className="flex-1 flex h-full">
+           <div className="flex-1 flex h-full">
             {/* Vision Content */}
-            <div className="bg-[#FFF7E9] flex-1 pr-8 flex flex-col justify-between py-2">
-              <div>
+             <div className="bg-[#FFF7E9] flex-1 pe-4 lg:pe-6 xl:pe-8 ps-0 flex flex-col justify-between py-2">
+              <div className style={{ left: '600px' }}>
                 <h2 className="text-5xl lg:text-6xl xl:text-6xl font-regular text-yellow-600 uppercase tracking-wide leading-tight mb- font-teko">
                   OUR VISION
                 </h2>
