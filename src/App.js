@@ -24,20 +24,16 @@ const App = () => {
       <Products />
       <About />
       <MissionVision />
+      <Benchmark />
+      <ParticleSizeComparison />
       <WhyChooseUs />
+      <IndustriesCards />
+      <OurServices />
+      <ProcessCards />
+      <ClientTestimonials />
+      <Contact /> 
       <RequirementForm/>
       <Footer />
-      {/* <Benchmark />
-      <ParticleSizeComparison />
-      
-      <ProcessCards />
-      <IndustriesCards />
-      <ClientTestimonials />
-      <OurServices />
-      <RequirementForm/>
-      <Services />
-      <Contact /> 
-      <Footer />  */}
     </div>
   );
 };

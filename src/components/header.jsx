@@ -94,10 +94,10 @@ const Header = () => {
                   </button>
                 </div>
                 <div className="flex flex-col">
-                  <p className="text-gray-800 font-semibold text-lg uppercase tracking-wider">
+                  <p className="text-gray-800 font-teko font-semibold text-lg uppercase tracking-wider">
                     CALL US
                   </p>
-                  <p className="text-gray-600 text-base tracking-wide">
+                  <p className="font-teko text-gray-600 text-base tracking-wide">
                     +91 97408 08234
                   </p>
                 </div>
@@ -113,10 +113,10 @@ const Header = () => {
                   <span className="text-xl font-bold text-yellow-600 group-hover:text-orange-600 transition-colors">@</span>
                 </button>
                 <div className="flex flex-col">
-                  <p className="text-gray-800 font-semibold text-lg uppercase tracking-wider">
+                  <p className="text-gray-800 font-teko font-semibold text-lg uppercase tracking-wider">
                     EMAIL US
                   </p>
-                  <p className="text-gray-600 text-sm tracking-wide truncate max-w-48">
+                  <p className="font-teko text-gray-600 text-sm tracking-wide truncate max-w-48">
                     rajmicronpvtltd@gmail.com
                   </p>
                 </div>

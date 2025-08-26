@@ -108,270 +108,94 @@ const ProcessCards = () => {
   const currentData = cardData[currentCard];
 
   return (
-    <div 
-      style={{
-        width: '1920px',
-        height: '739px',
-        top: '6298px',
-        transform: 'rotate(0deg)',
-        opacity: 1,
-        position: 'absolute'
-      }}
-      className="flex"
-    >
-      {/* First Section - Main Content */}
-      <div 
-        className="cursor-pointer"
-        style={{
-          width: '1235px',
-          height: '739px',
-          backgroundColor: '#FFF7E9',
-          opacity: 1,
-          transform: 'rotate(0deg)'
-        }}
-        onClick={nextCard}
-      >
-        <div 
-          style={{
-            width: '573px',
-            height: '570px',
-            top: '30px',
-            left: '195px',
-            transform: 'rotate(0deg)',
-            opacity: 1,
-            position: 'absolute'
-          }}
-          className="p-6"
-        >
-          <div className="flex gap-8">
-            <div className="flex-1">
-              <div className="mb-6">
-                <h1 
-                  className="text-2xl font-black text-gray-800 mb-2 tracking-tight"
-                  style={{
-                    width: '388px',
-                    height: '81px',
-                    top: '48px',
-                    left: '95px',
-                    transform: 'rotate(0deg)',
-                    opacity: 1,
-                    position: 'absolute',
-                    fontFamily: 'Font 1', 
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    fontSize: '90px',
-                    lineHeight: '63px',
-                    letterSpacing: '0%',
-                    verticalAlign: 'middle',
-                    textTransform: 'uppercase',
-                    display: 'flex',
-                    alignItems: 'center',
-                    color: '#CF8700'
-                  }}
-                >
-                  OUR PROCESS
-                </h1>
-                
-                <h2 
-                  className="text-2xl font-black text-gray-800 mb-2 tracking-tight"
-                  style={{
-                    width: '432px',
-                    height: '36px',
-                    top: '145px',
-                    left: '95px',
-                    transform: 'rotate(0deg)',
-                    opacity: 1,
-                    position: 'absolute',
-                    fontFamily: 'Font 1',
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    fontSize: '50px',
-                    lineHeight: '36px',
-                    letterSpacing: '0%',
-                    verticalAlign: 'middle',
-                    textTransform: 'uppercase',
-                    display: 'flex',
-                    alignItems: 'center',
-                    color: '#000000ff'
-                  }}
-                >
-                  {currentData.title}
-                </h2>
-                
-                <p 
-                  className="text-2xl font-black text-gray-800 mb-2 tracking-tight"
-                  style={{
-                    width: '495px',
-                    height: '120px',
-                    top: '195px',
-                    left: '95px',
-                    transform: 'rotate(0deg)',
-                    opacity: 1,
-                    position: 'absolute',
-                    fontFamily: 'Font 2',
-                    fontWeight: 400,
-                    fontStyle: 'normal',
-                    fontSize: '18px',
-                    lineHeight: '28px',
-                    letterSpacing: '0%',
-                    verticalAlign: 'top',
-                    textTransform: 'none',
-                    display: 'flex',
-                    alignItems: 'flex-start',
-                    color: '#000000ff'
-                  }}
-                >
-                  {currentData.description}
-                </p>
+    <section className="w-full bg-white py-8 lg:py-12">
+      <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 overflow-hidden rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+          
+          {/* Main Content Section */}
+          <div className="flex-1 bg-[#FFF7E9] rounded-lg lg:rounded-r-none cursor-pointer relative shadow-sm" onClick={nextCard}>
+            <div className="flex flex-col lg:flex-row min-h-[665px]">
+              
+              {/* Content Section */}
+              <div className="flex-1 p-8 lg:p-12 xl:p-16">
+                <div className="mb-8">
+                  <h1 className="font-teko text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#CF8700] uppercase tracking-wide leading-tight mb-4">
+                    OUR PROCESS
+                  </h1>
+                  
+                  <h2 className="font-teko text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-black uppercase tracking-wide leading-tight mb-6">
+                    {currentData.title}
+                  </h2>
+                  
+                  <p className="font-rubik text-base lg:text-lg text-black leading-7 max-w-[495px]">
+                    {currentData.description}
+                  </p>
+                </div>
+
+                {/* Features List */}
+                <div className="space-y-3 mb-10 max-w-[495px]">
+                  {currentData.features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <div className="w-3 h-3 rounded-full bg-[#CF8700] flex-shrink-0"></div>
+                      <span className="font-rubik text-sm font-medium uppercase text-black">
+                        {feature}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Learn More Button */}
+                <button className="font-teko bg-[#CF8700] text-white px-8 py-4 rounded transition-all duration-300 hover:bg-[#B8770A] hover:shadow-lg uppercase tracking-wide text-lg font-normal">
+                  LEARN MORE →
+                </button>
               </div>
 
-              {/* Features List */}
-              <div 
-                className="space-y-3"
-                style={{
-                  width: '495px',
-                  height: '180px',
-                  top: '330px',
-                  left: '95px',
-                  transform: 'rotate(0deg)',
-                  opacity: 1,
-                  position: 'absolute'
-                }}
-              >
-                {currentData.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div 
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: '#CF8700' }}
-                    ></div>
-                    <span 
-                      className="font-medium text-sm uppercase"
-                      style={{
-                        fontFamily: 'Font 2',
-                        fontSize: '14px',
-                        color: '#000000',
-                        fontWeight: 500
-                      }}
-                    >
-                      {feature}
-                    </span>
-                  </div>
-                ))}
+              {/* Image Section */}
+              <div className="w-full lg:w-[366px] flex items-center justify-center p-8 lg:pr-12">
+                <div className="w-full max-w-[366px] h-[400px] lg:h-[640px] rounded-lg overflow-hidden">
+                  <img 
+                    src={currentData.imageSrc} 
+                    alt={currentData.imageAlt} 
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
               </div>
-
-              {/* Learn More Button */}
-              <button 
-                className="text-white font-bold py-3 px-6 rounded transition-colors duration-200 uppercase tracking-wide text-sm hover:opacity-90"
-                style={{
-                  width: '286px',
-                  height: '65px',
-                  top: '590px',
-                  left: '95px',
-                  position: 'absolute',
-                  backgroundColor: '#CF8700',
-                  fontFamily: 'Teko, sans-serif',
-                  fontWeight: 400,
-                  fontStyle: 'normal',
-                  fontSize: '22px',
-                  lineHeight: '34px',
-                  letterSpacing: '0%',
-                  textTransform: 'uppercase',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  color: '#ffffff',
-                  border: 'none',
-                  cursor: 'pointer'
-                }}
-              >
-                LEARN MORE →
-              </button>
-            </div>
-
-            {/* Image Section */}
-            <div 
-              style={{
-                width: '366px',
-    height: '640px',
-    top: '51px',
-    left: '612px',
-    transform: 'rotate(0deg)',
-    opacity: 1,
-    borderRadius: '8px',
-    position: 'absolute'
-                
-              }}
-              className="flex items-center justify-center"
-            >
-              <img 
-    src={currentData.imageSrc} 
-    alt={currentData.imageAlt} 
-    className="w-full h-full object-contain rounded-lg"
-  />
             </div>
           </div>
+
+          {/* Right Side - Orange Container with Process Steps */}
+          <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-lg lg:rounded-l-none flex items-center justify-center py-8 lg:py-16">
+            <div className="space-y-3 w-full px-6 lg:px-0">
+              {currentData.processSteps.map((step, index) => (
+                <div
+                  key={index}
+                  className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-6 flex items-center justify-start px-5 py-4
+                    ${step.active 
+                      ? 'bg-white border-3 border-white rounded-r-[30px] lg:w-[469px] shadow-md -ml-3 lg:-ml-3' 
+                      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px] hover:shadow-sm'
+                    }
+                  `}
+                  style={{ height: '89px' }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setCurrentCard(index);
+                  }}
+                >
+                  <span className={`font-teko text-base uppercase tracking-wide
+                    ${step.active 
+                      ? 'text-[#CF8700] font-medium' 
+                      : 'text-black font-normal'
+                    }
+                  `}>
+                    {step.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </aside>
         </div>
       </div>
-
-      {/* Second Section - Orange Container with Process Steps */}
-      <div 
-        style={{
-          width: '483px',
-          height: '550px',
-          top: '195px',
-          backgroundColor: '#CF8700',
-          opacity: 1,
-          transform: 'rotate(0deg)',
-          borderTopRightRadius: '7px',
-          borderBottomRightRadius: '7px',
-        }}
-        className="flex items-center justify-center"
-      >
-        {/* Process Steps Selection */}
-       <div className="space-y-3 w-full">
-  {currentData.processSteps.map((step, index) => (
-    <div
-      key={index}
-      className="cursor-pointer transition-all duration-200 relative"
-      style={{
-        width: step.active ? '469px' : '431px',
-        height: '89px',
-        backgroundColor: 'white',
-        border: step.active ? '3px solid #fcfbfaff' : '3px solid #CF8700',
-        marginLeft: step.active ? '-11px' : '25px',
-        borderRadius: step.active ? '0px' : '30px',
-        borderTopRightRadius: step.active ? '30px' : undefined,
-        borderBottomRightRadius: step.active ? '30px' : undefined,
-        padding: '12px 20px',
-        boxShadow: step.active ? '0 4px 8px rgba(0,0,0,0.1)' : 'none',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        opacity: 1
-      }}
-      onClick={(e) => {
-        e.stopPropagation();
-        setCurrentCard(index);
-      }}
-    >
-      <span
-        className={`font-medium text-sm ${step.active ? 'font-bold' : ''}`}
-        style={{
-          color: step.active ? '#CF8700' : '#000000',
-          fontSize: '16px',
-          textTransform: 'uppercase'
-        }}
-      >
-        {step.name}
-      </span>
-    </div>
-  ))}
-</div>  
-        </div>
-
-      {/* Remaining space (fills the 1920px width) */}
-      <div style={{ flex: 1, backgroundColor: 'white' }}></div>
-    </div>
+    </section>
   );
 };
 

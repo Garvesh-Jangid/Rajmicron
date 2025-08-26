@@ -25,14 +25,14 @@ const Hero = () => {
             
             {/* Suitable For */}
             <div>
-              <p className="text-2xl sm:text-3xl lg:text-4xl font-medium text-gray-800 uppercase tracking-wide">
+              <p className="text-2xl sm:text-3xl lg:text-4xl font-teko font-regular text-gray-800 uppercase tracking-wide">
                 SUITABLE FOR
               </p>
             </div>
             
             {/* PAINTS - Large Orange Text */}
             <div className="my-3">
-              <h2 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-extrabold text-yellow-600 leading-none uppercase tracking-wide drop-shadow-lg">
+              <h2 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-teko font-extrabold text-yellow-600 leading-none uppercase tracking-wide drop-shadow-lg">
                 PAINTS
               </h2>
             </div>
