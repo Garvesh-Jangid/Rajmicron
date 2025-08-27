@@ -77,10 +77,10 @@ const About = () => {
                 
                 {/* Action Buttons Row */}
                 <div className="flex gap-2 h-16 lg:h-20">
-                  <button className="flex-1 bg-yellow-600 hover:bg-yellow-700 text-white font-bold uppercase tracking-wide transition-all duration-300 text-xs sm:text-sm flex items-center justify-center rounded-md transform hover:scale-105">
+                  <button className="font-teko flex-1 bg-yellow-600 hover:bg-yellow-700 text-white font-bold uppercase tracking-wide transition-all duration-300 text-xs sm:text-sm flex items-center justify-center rounded-md transform hover:scale-105">
                     LEARN MORE &gt;
                   </button>
-                  <button className="flex-1 border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 font-bold uppercase tracking-wide transition-all duration-300 text-xs sm:text-sm flex items-center justify-center rounded-md transform hover:scale-105">
+                  <button className="font-teko flex-1 border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-50 font-bold uppercase tracking-wide transition-all duration-300 text-xs sm:text-sm flex items-center justify-center rounded-md transform hover:scale-105">
                     CONTACT US &gt;
                   </button>
                 </div>

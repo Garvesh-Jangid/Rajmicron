@@ -141,8 +141,8 @@ const ContactFAQ = () => {
                       <div className="text-center z-10">
                         <MapPin className="w-6 h-6 lg:w-7 lg:h-7 text-red-500 mx-auto mb-1" />
                         <div 
-                          className="text-xs text-gray-700 font-medium"
-                          style={{ fontFamily: 'Rubik, sans-serif' }}
+                          className="text-xs text-gray-700 font-medium font-rubik"
+                          
                         >
                           📍 Your Location: {userLocation.latitude.toFixed(2)}, {userLocation.longitude.toFixed(2)}
                         </div>
@@ -175,7 +175,7 @@ const ContactFAQ = () => {
           </aside>
 
           {/* Right Side - Main Content */}
-          <div className="flex-1 bg-[#FFF7E9]">
+          <div className="flex-1 bg-[#FFF7E9] ml-2">
             <div className="flex flex-col min-h-[450px]">
               
               {/* Content Section */}
@@ -209,7 +209,7 @@ const ContactFAQ = () => {
                 </div>
 
                 {/* FAQ List */}
-                <div className="space-y-2 max-w-[600px]">
+                <div className="space-y-2 max-w-[900px]">
                   {faqs.map((faq, index) => (
                     <div key={index} className="border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm">
                       <button

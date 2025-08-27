@@ -39,7 +39,7 @@ const Hero = () => {
             
             {/* Description */}
             <p
-              className="text-2xl font-['Font2'] text-gray-700 leading-snug tracking-tight max-w-2xl break-words"
+              className="text-2xl font-rubik text-gray-700 leading-snug tracking-tight max-w-2xl break-words"
             >
               Delivering premium GCC and PCC products with unmatched quality, 
               sustainability, and innovation — sourced from nature, refined for performance.
@@ -48,12 +48,12 @@ const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 pt-4">
               {/* Send Enquiry Button */}
-              <button className="bg-gray-100 hover:bg-yellow-600 hover:text-white border border-gray-300 hover:border-yellow-600 px-8 py-4 rounded-md font-semibold text-base uppercase tracking-wide transition-all duration-300 transform hover:scale-105 hover:shadow-lg min-w-48">
+              <button className="bg-gray-100 hover:bg-yellow-600 hover:text-white border border-gray-300 hover:border-yellow-600 px-8 py-4 rounded-md font-teko font-semibold text-base uppercase tracking-wide transition-all duration-300 transform hover:scale-105 hover:shadow-lg min-w-48">
                 SEND ENQUIRY >
               </button>
 
               {/* Explore Products Button */}
-              <button className="bg-gray-100 hover:bg-gray-200 border border-gray-300 hover:border-gray-400 px-8 py-4 rounded-md font-semibold text-base text-gray-700 uppercase tracking-wide transition-all duration-300 transform hover:scale-105 hover:shadow-lg min-w-48">
+              <button className="bg-gray-100 hover:bg-gray-200 border border-gray-300 hover:border-gray-400 px-8 py-4 rounded-md font-teko font-semibold text-base text-gray-700 uppercase tracking-wide transition-all duration-300 transform hover:scale-105 hover:shadow-lg min-w-48">
                 EXPLORE PRODUCTS >
               </button>
             </div>

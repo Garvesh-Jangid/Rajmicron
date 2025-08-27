@@ -108,7 +108,7 @@ const ProcessCards = () => {
   const currentData = cardData[currentCard];
 
   return (
-    <section className="w-full bg-white py-8 lg:py-12">
+    <section className="w-full py-8 lg:py-12">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 overflow-hidden rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
           
@@ -167,29 +167,29 @@ const ProcessCards = () => {
           <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-lg lg:rounded-l-none flex items-center justify-center py-8 lg:py-16">
             <div className="space-y-3 w-full px-6 lg:px-0">
               {currentData.processSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-6 flex items-center justify-start px-5 py-4
-                    ${step.active 
-                      ? 'bg-white border-3 border-white rounded-r-[30px] lg:w-[469px] shadow-md -ml-3 lg:-ml-3' 
-                      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px] hover:shadow-sm'
-                    }
-                  `}
-                  style={{ height: '89px' }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCurrentCard(index);
-                  }}
-                >
-                  <span className={`font-teko text-base uppercase tracking-wide
-                    ${step.active 
-                      ? 'text-[#CF8700] font-medium' 
-                      : 'text-black font-normal'
-                    }
-                  `}>
-                    {step.name}
-                  </span>
-                </div>
+                 <div
+  key={index}
+  className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-6 flex items-center justify-center px-5 py-4
+    ${step.active 
+      ? 'bg-white border-3 border-white rounded-r-[30px] lg:w-[469px] shadow-md -ml-3 lg:-ml-3' 
+      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px] hover:shadow-sm'
+    }
+  `}
+  style={{ height: '89px' }}
+  onClick={(e) => {
+    e.stopPropagation();
+    setCurrentCard(index);
+  }}
+>
+  <span className={`font-teko text-lg lg:text-4xl uppercase tracking-wide text-center
+    ${step.active 
+      ? 'text-[#CF8700] font-medium' 
+      : 'text-black font-normal'
+    }
+  `}>
+    {step.name}
+  </span>
+</div>
               ))}
             </div>
           </aside>

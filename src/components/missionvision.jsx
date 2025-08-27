@@ -54,11 +54,14 @@ const MissionVision = () => {
           </div>
 
           {/* Vision Section - Right */}
-           <div className="flex-1 flex h-full">
+          <div className="flex-1 flex h-full">
+            {/* Empty space at the beginning */}
+            <div className="bg-[#FFF7E9] w-18 lg:w-20 xl:w-20"></div>
+            
             {/* Vision Content */}
-             <div className="bg-[#FFF7E9] flex-1 pe-4 lg:pe-6 xl:pe-8 ps-0 flex flex-col justify-between py-2">
-              <div className style={{ left: '600px' }}>
-                <h2 className="text-5xl lg:text-6xl xl:text-6xl font-regular text-yellow-600 uppercase tracking-wide leading-tight mb- font-teko">
+            <div className="bg-[#FFF7E9] flex-1 px-0 lg:px-0 xl:px-0 flex flex-col justify-between py-2">
+              <div>
+                <h2 className="text-5xl lg:text-6xl xl:text-6xl font-regular text-yellow-600 uppercase tracking-wide leading-tight mb-2 font-teko">
                   OUR VISION
                 </h2>
 
@@ -73,7 +76,7 @@ const MissionVision = () => {
               </div>
 
               {/* Statistics */}
-              <div className="flex gap-12 lg:gap-16 font-regular font-teko">
+              <div className="flex gap-8 lg:gap-12 font-regular font-teko">
                 <div>
                   <h4 className="text-4xl lg:text-5xl xl:text-6xl font-regular text-gray-800 mb-2">
                     100%
@@ -102,15 +105,12 @@ const MissionVision = () => {
             </div>
 
             {/* Factory Images - Right Side */}
-            <div className="w-72 xl:w-80 flex flex-col gap-4 justify-center">
+            <div className="w-72 xl:w-80 flex flex-col gap-4 justify-center bg-[#FFF7E9] pl-4">
               <div className="rounded-lg overflow-hidden h-40 lg:h-44 xl:h-48 shadow-lg">
                 <img
                   src="/assets/aboutus/exterior/image 5.png"
                   alt="Factory Exterior Top"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNEMUQ1REIiIHN0cm9rZT0iIzlCOUJBMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0Y5RkFGQiIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjEiLz4KPHR2eHQgeD0iMjAwIiB5PSIxNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5QjlCQTMiIGZvbnQtc2l6ZT0iMTYiPkZhY3RvcnkgMTwvdGV4dD4KPC9zdmc+';
-                  }}
                 />
               </div>
 
@@ -119,9 +119,6 @@ const MissionVision = () => {
                   src="/assets/aboutus/exterior/image 5.png"
                   alt="Factory Exterior Bottom"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNEMUQ1REIiIHN0cm9rZT0iIzlCOUJBMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0Y5RkFGQiIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjEiLz4KPHR2eHQgeD0iMjAwIiB5PSIxNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5QjlCQTMiIGZvbnQtc2l6ZT0iMTYiPkZhY3RvcnkgMjwvdGV4dD4KPC9zdmc+';
-                  }}
                 />
               </div>
             </div>
@@ -155,7 +152,6 @@ const MissionVision = () => {
                   key={item.num}
                   className="bg-white rounded-full px-4 py-3 flex items-center gap-3"
                 >
-                 
                   <p className="text-sm font-semibold text-gray-800 leading-tight">
                     {item.title}
                   </p>
@@ -165,7 +161,7 @@ const MissionVision = () => {
           </div>
 
           {/* Vision Section Mobile */}
-          <div>
+         <div className="flex gap-6 lg:gap-8 justify-end">
             <h2 className="text-4xl sm:text-5xl font-bold text-yellow-600 uppercase tracking-wide leading-tight mb-3">
               OUR VISION
             </h2>
@@ -214,9 +210,6 @@ const MissionVision = () => {
                   src="/assets/aboutus/exterior/image 5.png"
                   alt="Factory Exterior 1"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  onError={(e) => {
-                    e.target.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxyZWN0IHg9IjUwIiB5PSI1MCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIyMDAiIGZpbGw9IiNEMUQ1REIiIHN0cm9rZT0iIzlCOUJBMyIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxyZWN0IHg9IjEwMCIgeT0iMTAwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI0Y5RkFGQiIgc3Ryb2tlPSIjOUI5QkEzIiBzdHJva2Utd2lkdGg9IjEiLz4KPHR2eHQgeD0iMjAwIiB5PSIxNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM5QjlCQTMiIGZvbnQtc2l6ZT0iMTYiPkZhY3RvcnkgMTwvdGV4dD4KPC9zdmc+';
-                  }}
                 />
               </div>
 
@@ -225,7 +218,6 @@ const MissionVision = () => {
                   src="/assets/aboutus/exterior/image 5.png"
                   alt="Factory Exterior 2"
                   className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  
                 />
               </div>
             </div>

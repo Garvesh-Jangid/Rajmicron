@@ -161,7 +161,7 @@ const IndustriesCards = () => {
                     setCurrentCard(index);
                   }}
                 >
-                  <span className={`font-teko text-base uppercase tracking-wide
+                  <span className={`font-teko text-lg lg:text-4xl uppercase tracking-wide text-center
                     ${industry.active 
                       ? 'text-[#CF8700] font-medium' 
                       : 'text-black font-normal'
@@ -175,7 +175,7 @@ const IndustriesCards = () => {
           </aside>
 
           {/* Right Side - Main Content */}
-          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative" onClick={nextCard}>
+          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative ml-6" onClick={nextCard}>
             <div className="flex flex-col lg:flex-row min-h-[665px]">
               
               {/* Content Section */}

@@ -57,8 +57,8 @@ const Header = () => {
           </h1>
 
           <div
-            className="flex flex-col sm:flex-row sm:space-x-10 text-base sm:text-lg lg:text-xl text-gray-700 mt-1 space-y-2 sm:space-y-0 font-normal w-full max-w-4xl"
-            style={{ fontFamily: "Font2" }}
+            className="flex flex-col font-rubik sm:flex-row sm:space-x-10 text-base sm:text-lg lg:text-xl text-gray-700 mt-1 space-y-2 sm:space-y-0 font-normal w-full max-w-4xl"
+        
           >
             <div className="flex items-center justify-center sm:justify-start space-x-3 w-full">
               <MapPin className="w-6 h-6 flex-shrink-0 text-gray-600" />
