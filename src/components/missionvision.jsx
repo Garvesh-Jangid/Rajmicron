@@ -6,10 +6,10 @@ const MissionVision = () => {
       id="mission-vision"
       className="relative overflow-hidden py-10 lg:py-2"
     >
-      <div className="bg-[#ffffff] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14"> 
+      <div className="bg-[#ffffff] max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-0"> 
         
         {/* Desktop Layout */}
-        <div className="hidden lg:flex items-stretch gap-1 lg:gap-2 xl:gap-3">
+        <div className="hidden lg:flex items-stretch gap-1 lg:gap-2 xl:gap-2">
           {/* Mission Section - Left */}
           <div className="shrink-0 basis-80 md:basis-100 xl:basis-[28rem] bg-yellow-600 rounded-lg p-8 flex flex-col justify-between h-full">
             <div>

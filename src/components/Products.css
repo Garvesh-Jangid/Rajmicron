@@ -1,0 +1,16 @@
+/* Simple slide animation for the entire products section */
+.slide-container {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-container.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Optional: Add a subtle fade-in delay for smooth effect */
+.slide-container {
+  transition: opacity 0.8s ease-out 0.1s, transform 0.8s ease-out 0.1s;
+}

@@ -22,16 +22,12 @@ const Header = () => {
 
   return (
     <>
-      {/* Google Fonts Link */}
-      <link 
-        href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" 
-        rel="stylesheet" 
-      />
       
-     <header className="bg-white shadow-sm relative">
+      
+     <header className="bg-white relative">
   {/* Top section with logo, company info and contact */}
   <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0">
+    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center py-4 space-y-4 lg:space-y-0 space-x-0 lg:space-x-6 relative">
       {/* Logo and Company Info */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-3 sm:space-y-0">
         <div className="w-16 h-20 sm:w-18 sm:h-20 rounded flex items-center justify-center flex-shrink-0">
@@ -73,9 +69,9 @@ const Header = () => {
             </div>
 
             {/* Contact Info - Desktop */}
-            <div className="hidden lg:flex space-x-4 lg:mr-8">
+            <div className="hidden lg:flex space-x-4 lg:mr-12">
               {/* Call Section */}
-              <div className="flex items-center space-x-3 border border-gray-300 rounded-lg p-3 bg-gray-50">
+              <div className="flex items-center space-x-3 border border-[#25272D14] rounded-lg p-3 bg-[#F2F2F2]">
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={handleWhatsApp}
@@ -104,7 +100,7 @@ const Header = () => {
               </div>
 
               {/* Email Section */}
-              <div className="flex items-center space-x-3 border border-gray-300 rounded-lg p-3 bg-gray-50">
+              <div className="flex items-center space-x-3 border border-[#25272D14] rounded-lg p-3 bg-[#F2F2F2]">
                 <button
                   onClick={handleEmail}
                   className="w-10 h-10 flex items-center justify-center hover:bg-orange-100 transition-colors rounded-full group"
@@ -161,7 +157,10 @@ const Header = () => {
                 <li>
                   <a 
                     href="#home" 
-                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-white bg-yellow-600 hover:bg-yellow-700 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    className="flex items-center justify-center lg:justify-center px-6 py-2 lg:py-3 
+             text-white bg-yellow-600 hover:bg-yellow-700  
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-regular text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     HOME
@@ -169,17 +168,24 @@ const Header = () => {
                 </li>
                 <li>
                   <a 
-                    href="#about" 
-                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    ABOUT US
-                  </a>
+  href="#about"
+  className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 
+             text-gray-700 hover:text-white hover:bg-yellow-600 
+             hover:py-2 hover:lg:py-3
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-medium text-lg lg:text-xl uppercase tracking-widest"
+>
+  ABOUT US
+</a>
                 </li>
                 <li>
                   <a 
                     href="#why-choose" 
-                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 
+             text-gray-700 hover:text-white hover:bg-yellow-600 
+             hover:py-2 hover:lg:py-3
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-medium text-lg lg:text-xl uppercase tracking-widest"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     WHY CHOOSE US?
@@ -188,7 +194,11 @@ const Header = () => {
                 <li>
                   <a 
                     href="#industries" 
-                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 
+             text-gray-700 hover:text-white hover:bg-yellow-600 
+             hover:py-2 hover:lg:py-3
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-medium text-lg lg:text-xl uppercase tracking-widest"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     INDUSTRIES
@@ -197,7 +207,11 @@ const Header = () => {
                 <li className="relative">
                   <button
                     onClick={toggleProducts}
-                    className="flex items-center justify-center lg:justify-center w-full px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 
+             text-gray-700 hover:text-white hover:bg-yellow-600 
+             hover:py-2 hover:lg:py-3
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-medium text-lg lg:text-xl uppercase tracking-widest"
                   >
                     PRODUCTS
                     <ChevronDown className={`w-5 h-5 ml-2 transition-transform ${isProductsOpen ? 'rotate-180' : ''}`} />
@@ -230,7 +244,11 @@ const Header = () => {
                 <li>
                   <a 
                     href="#services" 
-                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 text-gray-700 hover:text-white hover:bg-yellow-600 transition-all duration-300 rounded-lg lg:rounded-md font-medium text-lg lg:text-xl uppercase tracking-widest transform hover:scale-105"
+                    className="flex items-center justify-center lg:justify-center px-6 py-3 lg:py-4 
+             text-gray-700 hover:text-white hover:bg-yellow-600 
+             hover:py-2 hover:lg:py-3
+             transition-all duration-300 rounded-lg lg:rounded-md 
+             font-medium text-lg lg:text-xl uppercase tracking-widest"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     SERVICES

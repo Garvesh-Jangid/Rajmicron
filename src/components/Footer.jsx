@@ -37,7 +37,7 @@ const Footer = () => {
       
 <div className="absolute inset-0 bg-[#222429cc]"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div className="relative  mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr] gap-10">
           {/* Left: Logo + Info */}
           <div className="min-w-[250px]">
@@ -57,7 +57,7 @@ const Footer = () => {
 
               <div className="min-w-0">
                 <h1
-                  className="text-xl lg:text-2xl font-medium uppercase tracking-wide leading-tight text-white"
+                  className="text-xl lg:text-4xl font-medium uppercase tracking-wide leading-tight text-white"
                   style={{ fontFamily: "Teko, sans-serif" }}
                 >
                   RAJ MICRON PRIVATE LIMITED

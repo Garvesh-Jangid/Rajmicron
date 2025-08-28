@@ -55,7 +55,7 @@ const ContactFAQ = () => {
   return (
     <section className="w-full bg-white py-2 lg:py-4">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row overflow-hidden rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+        <div className="flex flex-col lg:flex-row overflow-hidden rounded-lg ">
           
           {/* Left Side - Orange Container with Contact Info */}
           <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-l-lg flex items-center justify-center py-2 lg:py-4">

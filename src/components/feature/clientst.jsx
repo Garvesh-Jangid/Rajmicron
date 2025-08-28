@@ -63,7 +63,7 @@ const ClientTestimonials = () => {
   return (
     <section
       id="client-testimonials"
-      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-16 xl:py-20"
+      className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-8 xl:py-8"
     >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
@@ -91,11 +91,11 @@ const ClientTestimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16 ">
           {visibleTestimonials.map((testimonial, index) => (
             <div 
               key={currentSlide * cardsPerSlide + index} 
-              className="bg-[#FFF7E9] p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-start min-h-[280px] sm:min-h-[300px] lg:min-h-[320px] text-left transform hover:-translate-y-1 relative overflow-hidden"
+              className="bg-[#FFF7E9] p-4 sm:p-6 lg:p-8 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-center min-h-[280px] sm:min-h-[300px] lg:min-h-[320px] text-left transform hover:-translate-y-1 relative overflow-hidden"
             >
               {/* Decorative background pattern */}
               <div className="absolute inset-0 opacity-5">

@@ -1,0 +1,82 @@
+/* Modal overlay effect */
+.form-focused {
+  position: relative;
+  z-index: 50;
+}
+
+/* Form container elevation when focused */
+.form-container {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.form-elevated {
+  position: relative;
+  z-index: 50;
+  transform: translateY(-10px);
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.25),
+    0 10px 20px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button styling */
+.close-button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background-color: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+/* Enhanced form field focus effects */
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 25px -5px rgba(245, 158, 11, 0.25),
+    0 4px 6px -2px rgba(245, 158, 11, 0.1);
+}
+
+/* Smooth transitions for all form elements */
+.form-container input,
+.form-container select,
+.form-container textarea {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Background blur effect for the rest of the page */
+body.form-modal-open {
+  overflow: hidden;
+}
+
+/* Ensure form stays on top */
+.form-focused .form-container {
+  position: relative;
+  z-index: 60;
+}
+
+/* Optional: Add a subtle glow effect to the form when focused */
+.form-elevated::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, #f59e0b, #d97706, #f59e0b);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0.1;
+  filter: blur(10px);
+}

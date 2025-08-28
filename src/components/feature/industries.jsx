@@ -16,6 +16,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5.png",
       imageAlt: "Paint and coating applications",
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: true },
         { name: "Plastics & Polymers", active: false },
@@ -37,6 +38,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5-1.png",
       imageAlt: "Plastic and polymer manufacturing",
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: true },
@@ -58,6 +60,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5-2.png",
       imageAlt: "Paper and pulp production",
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: false },
@@ -79,6 +82,7 @@ const IndustriesCards = () => {
       ],
       imageSrc:"/assets/industries/image 5-3.png",
       imageAlt: "Construction materials and applications",
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: false },
@@ -100,6 +104,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5-4.png",
       imageAlt: "Pharmaceutical applications",
+      iconSrc: '/assets/vectors/arrow.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: false },
@@ -121,6 +126,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5-5.png",
       imageAlt: "Food industry applications",
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: false },
@@ -139,51 +145,67 @@ const IndustriesCards = () => {
   const currentData = cardData[currentCard];
 
   return (
-    <section className="w-full bg-white py-8 lg:py-12">
+    <section className="w-full bg-white py-8 lg:py-12 xl:py-8">
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row overflow-hidden rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+        <div className="flex flex-col lg:flex-row  overflow-hidden  rounded-lg ">
           
           {/* Left Side - Orange Container with Industry Selection */}
           <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-l-lg flex items-center justify-center py-8 lg:py-16">
             <div className="space-y-3 w-full px-6 lg:px-0">
               {currentData.industries.map((industry, index) => (
-                <div
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-6 flex items-center justify-start px-5 py-4
-                    ${industry.active 
-                      ? 'bg-white border-3 border-white rounded-l-[30px] lg:w-[458px] shadow-md' 
-                      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px] hover:shadow-sm'
-                    }
-                  `}
-                  style={{ height: '89px' }}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setCurrentCard(index);
-                  }}
-                >
-                  <span className={`font-teko text-lg lg:text-4xl uppercase tracking-wide text-center
-                    ${industry.active 
-                      ? 'text-[#CF8700] font-medium' 
-                      : 'text-black font-normal'
-                    }
-                  `}>
-                    {industry.name}
-                  </span>
-                </div>
+               <div
+  key={index}
+  className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-8 flex items-center justify-between px-5 py-4
+    ${industry.active 
+      ? 'bg-white border-3 border-white rounded-l-[40px] lg:w-[458px]' 
+      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px]'
+    }
+  `}
+  style={{ height: '89px' }}
+  onClick={(e) => {
+    e.stopPropagation();
+    setCurrentCard(index);
+  }}
+>
+  {/* Text first */}
+  <span
+    className={`font-teko text-lg lg:text-3xl uppercase tracking-wide
+      ${industry.active 
+        ? 'text-[#CF8700] font-medium' 
+        : 'text-black font-normal'
+      }
+    `}
+  >
+    {industry.name}
+  </span>
+
+  {/* Icon - only show for active step */}
+  {industry.active && (
+    <div className="flex-shrink-0 ml-8">
+      <img 
+        src={cardData[index].iconSrc} 
+        alt={`${industry.name} icon`}
+        className="w-8 h-8 object-contain"
+      />
+    </div>
+  )}
+</div>
               ))}
             </div>
           </aside>
 
           {/* Right Side - Main Content */}
-          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative ml-6" onClick={nextCard}>
+          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative ml-2" onClick={nextCard}>
             <div className="flex flex-col lg:flex-row min-h-[665px]">
               
               {/* Content Section */}
               <div className="flex-1 p-8 lg:p-12 xl:p-16">
                 <div className="mb-8">
-                  <h1 className="font-teko text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal text-[#CF8700] uppercase tracking-wide leading-tight mb-4">
-                    INDUSTRIES WE SERVE
-                  </h1>
+                  <h1 className="font-teko text-4xl sm:text-5xl lg:text-6xl xl:text-7xl 
+               font-normal text-[#CF8700] uppercase tracking-wide 
+               leading-tight mb-4 whitespace-nowrap">
+  INDUSTRIES WE SERVE
+</h1>
                   
                   <h2 className="font-teko text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-normal text-black uppercase tracking-wide leading-tight mb-6">
                     {currentData.title}
@@ -196,15 +218,28 @@ const IndustriesCards = () => {
 
                 {/* Features List */}
                 <div className="space-y-3 mb-10 max-w-[495px]">
-                  {currentData.features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <div className="w-3 h-3 rounded-full bg-[#CF8700] flex-shrink-0"></div>
-                      <span className="font-rubik text-sm font-medium uppercase text-black">
-                        {feature}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+  {currentData.features.map((feature, index) => (
+    <div key={index} className="flex items-center gap-3">
+      {/* Circle with chevron */}
+      <div className="flex items-center justify-center w-6 h-6 rounded-full bg-[#CF8700]">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" 
+          fill="none" 
+          viewBox="0 0 24 24" 
+          strokeWidth={2} 
+          stroke="white" 
+          className="w-3.5 h-3.5"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </div>
+      <span className="font-rubik text-sm font-medium uppercase text-black">
+        {feature}
+      </span>
+    </div>
+  ))}
+</div>
+
 
                 {/* Learn More Button */}
                 <button className="font-teko bg-[#CF8700] text-white px-8 py-4 rounded transition-all duration-300 hover:bg-[#B8770A] hover:shadow-lg uppercase tracking-wide text-lg font-normal">

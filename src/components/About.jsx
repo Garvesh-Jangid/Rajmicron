@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import './About.css';
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Trigger dropdown animation on component mount
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <>
       {/* Google Fonts Link */}
@@ -11,7 +23,7 @@ const About = () => {
       
       <section
         id="about"
-        className="relative overflow-hidden bg-white py-4 lg:py-4"
+        className={`relative overflow-hidden bg-white py-4 lg:py-4 dropdown-container ${isVisible ? 'dropdown-visible' : ''}`}
       >
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-14">
           {/* About Us Header */}
@@ -31,13 +43,12 @@ const About = () => {
             </h3>
 
             <p
-  className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl font-rubik"
-  
->
-  At Raj Micron, we are committed to producing Natural Ground Calcium Carbonate that meets the highest global quality standards.
-  Our operations are built on precision, innovation, and sustainability, ensuring that every product we deliver contributes to our
-  clients' success. From paints and plastics to paper and pharmaceuticals, our GCC plays a vital role in diverse industries.
-</p>
+              className="text-lg sm:text-xl lg:text-lg font-normal text-gray-800 uppercase tracking-wide leading-relaxed max-w-8xl font-rubik"
+            >
+              At Raj Micron, we are committed to producing Natural Ground Calcium Carbonate that meets the highest global quality standards.
+              Our operations are built on precision, innovation, and sustainability, ensuring that every product we deliver contributes to our
+              clients' success. From paints and plastics to paper and pharmaceuticals, our GCC plays a vital role in diverse industries.
+            </p>
           </div>
 
           {/* Factory Images */}
@@ -49,7 +60,6 @@ const About = () => {
                   src="/assets/aboutus/interior/Rectangle 4.png"
                   alt="Factory Interior 1"
                   className="w-full h-full object-cover"
-                  
                 />
               </div>
               
@@ -59,7 +69,6 @@ const About = () => {
                   src="/assets/aboutus/interior/Rectangle 5.png"
                   alt="Factory Interior 2"
                   className="w-full h-full object-cover"
-                 
                 />
               </div>
               
@@ -71,7 +80,6 @@ const About = () => {
                     src="/assets/aboutus/interior/Rectangle 6.png"
                     alt="Product Processing"
                     className="w-full h-full object-cover"
-                    
                   />
                 </div>
                 
@@ -122,13 +130,11 @@ const About = () => {
                     src={item.iconSrc}
                     alt={`${item.title} icon`}
                     className="w-full h-full object-contain"
-                    
                   />
                 </div>
                 
                 <h4 
                   className="text-2xl lg:text-3xl font-normal text-gray-800 uppercase tracking-wide leading-tight mb-3 font-teko"
-                  
                 >
                   {item.title}
                 </h4>
