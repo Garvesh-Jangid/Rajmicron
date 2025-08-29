@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 const IndustriesCards = () => {
   const [currentCard, setCurrentCard] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
 
   const cardData = [
     {
@@ -104,7 +105,7 @@ const IndustriesCards = () => {
       ],
       imageSrc: "/assets/industries/image 5-4.png",
       imageAlt: "Pharmaceutical applications",
-      iconSrc: '/assets/vectors/arrow.png',
+      iconSrc: '/assets/vectors/arrowr.png',
       industries: [
         { name: "Paints & Coatings", active: false },
         { name: "Plastics & Polymers", active: false },
@@ -145,20 +146,23 @@ const IndustriesCards = () => {
   const currentData = cardData[currentCard];
 
   return (
-    <section className="w-full bg-white py-8 lg:py-12 xl:py-8">
+    <section
+      id="industries"
+      className="relative overflow-hidden bg-white py-4 lg:py-4"
+    >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row  overflow-hidden  rounded-lg ">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-2 overflow-hidden rounded-lg">
           
           {/* Left Side - Orange Container with Industry Selection */}
-          <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-l-lg flex items-center justify-center py-8 lg:py-16">
+          <aside className="w-full lg:w-[483px] bg-[#CF8700] rounded-lg lg:rounded-r-none flex items-center justify-center py-8 lg:py-16">
             <div className="space-y-3 w-full px-6 lg:px-0">
               {currentData.industries.map((industry, index) => (
                <div
   key={index}
   className={`cursor-pointer transition-all duration-300 mx-auto lg:mx-8 flex items-center justify-between px-5 py-4
     ${industry.active 
-      ? 'bg-white border-3 border-white rounded-l-[40px] lg:w-[458px]' 
-      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px]'
+      ? 'bg-white border-3 border-white rounded-l-[40px] lg:w-[458px] shadow-md' 
+      : 'bg-white border-3 border-[#CF8700] rounded-[30px] lg:w-[431px] hover:shadow-sm'
     }
   `}
   style={{ height: '89px' }}
@@ -195,7 +199,7 @@ const IndustriesCards = () => {
           </aside>
 
           {/* Right Side - Main Content */}
-          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative ml-2" onClick={nextCard}>
+          <div className="flex-1 bg-[#FFF7E9] cursor-pointer relative shadow-sm" onClick={nextCard}>
             <div className="flex flex-col lg:flex-row min-h-[665px]">
               
               {/* Content Section */}

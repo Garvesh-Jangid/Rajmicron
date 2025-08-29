@@ -62,7 +62,7 @@ const OurServices = () => {
 
   return (
     <section
-      id="our-services"
+      id="services"
       className="relative overflow-hidden bg-white py-8 sm:py-12 lg:py-8 xl:py-8"
     >
       <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">

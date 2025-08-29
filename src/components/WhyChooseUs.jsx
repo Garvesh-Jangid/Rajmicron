@@ -2,7 +2,10 @@ import React from "react";
 
 const WhyChooseUs = () => {
   return (
-    <div id="whychooseus" className="relative overflow-hidden py-16 lg:py-10">
+    <section
+      id="why-choose"
+      className="relative overflow-hidden bg-white py-4 lg:py-4"
+    >
      
       <section className=" max-w-screen-2xl rounded-xl mx-auto px-4 sm:px-6 lg:px-8 py-6 lg:py-6">
         <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -117,7 +120,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </section>
-    </div>
+    </section>
   );
 };
 
